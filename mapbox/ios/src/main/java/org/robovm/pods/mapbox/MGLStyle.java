@@ -45,9 +45,7 @@ import org.robovm.apple.coreanimation.*;
 
     /*<ptr>*/public static class MGLStylePtr extends Ptr<MGLStyle, MGLStylePtr> {}/*</ptr>*/
     /*<bind>*/static { ObjCRuntime.bind(MGLStyle.class); }/*</bind>*/
-    /*<constants>*/
-    public static final int defaultVersion = 10;
-    /*</constants>*/
+    /*<constants>*//*</constants>*/
     /*<constructors>*/
     public MGLStyle() {}
     protected MGLStyle(Handle h, long handle) { super(h, handle); }
@@ -150,4 +148,12 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "trafficNightStyleURLWithVersion:")
     public static native NSURL trafficNightStyleURL(@MachineSizedSInt long version);
     /*</methods>*/
+
+    /*
+     * customised items
+     */
+
+    // declared as a constant, but may change
+    @GlobalValue(symbol="MGLStyleDefaultVersion", optional=true)
+    public static native int getDefaultVersion();
 }
