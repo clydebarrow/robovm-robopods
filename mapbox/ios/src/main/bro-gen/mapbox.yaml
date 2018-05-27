@@ -760,10 +760,6 @@ constants:
     MGLOfflinePack(.*)UserInfoKey:
         exclude: true
 
-    MGLStyleDefaultVersion:
-        class: MGLStyle
-        name: defaultVersion
-
     kCFNotFound:
         exclude: true
 
@@ -811,6 +807,10 @@ constants:
 
     UIStackViewSpacingUseSystem:
         exclude: true
+
+    MGLStyleDefaultVersion:
+        exclude: true
+
 
     # Make sure we don't miss any constants if new ones are introduced in a later version
     k?(MGL.*):
