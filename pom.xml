@@ -192,5 +192,6 @@
         <module>heyzap</module>
         <module>parse</module>
         <module>reachability</module>
+        <module>mapbox</module>
     </modules>
 </project>
