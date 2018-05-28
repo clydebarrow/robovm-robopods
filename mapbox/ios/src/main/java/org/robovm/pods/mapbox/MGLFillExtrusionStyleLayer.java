@@ -55,57 +55,57 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "fillExtrusionBase")
-    public native MGLStyleValue<NSNumber> getFillExtrusionBase();
+    public native NSExpression getFillExtrusionBase();
     @Property(selector = "setFillExtrusionBase:")
-    public native void setFillExtrusionBase(MGLStyleValue<NSNumber> v);
+    public native void setFillExtrusionBase(NSExpression v);
     @Property(selector = "fillExtrusionBaseTransition")
     public native @ByVal MGLTransition getFillExtrusionBaseTransition();
     @Property(selector = "setFillExtrusionBaseTransition:")
     public native void setFillExtrusionBaseTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionColor")
-    public native MGLStyleValue<UIColor> getFillExtrusionColor();
+    public native NSExpression getFillExtrusionColor();
     @Property(selector = "setFillExtrusionColor:")
-    public native void setFillExtrusionColor(MGLStyleValue<UIColor> v);
+    public native void setFillExtrusionColor(NSExpression v);
     @Property(selector = "fillExtrusionColorTransition")
     public native @ByVal MGLTransition getFillExtrusionColorTransition();
     @Property(selector = "setFillExtrusionColorTransition:")
     public native void setFillExtrusionColorTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionHeight")
-    public native MGLStyleValue<NSNumber> getFillExtrusionHeight();
+    public native NSExpression getFillExtrusionHeight();
     @Property(selector = "setFillExtrusionHeight:")
-    public native void setFillExtrusionHeight(MGLStyleValue<NSNumber> v);
+    public native void setFillExtrusionHeight(NSExpression v);
     @Property(selector = "fillExtrusionHeightTransition")
     public native @ByVal MGLTransition getFillExtrusionHeightTransition();
     @Property(selector = "setFillExtrusionHeightTransition:")
     public native void setFillExtrusionHeightTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionOpacity")
-    public native MGLStyleValue<NSNumber> getFillExtrusionOpacity();
+    public native NSExpression getFillExtrusionOpacity();
     @Property(selector = "setFillExtrusionOpacity:")
-    public native void setFillExtrusionOpacity(MGLStyleValue<NSNumber> v);
+    public native void setFillExtrusionOpacity(NSExpression v);
     @Property(selector = "fillExtrusionOpacityTransition")
     public native @ByVal MGLTransition getFillExtrusionOpacityTransition();
     @Property(selector = "setFillExtrusionOpacityTransition:")
     public native void setFillExtrusionOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionPattern")
-    public native MGLStyleValue<NSString> getFillExtrusionPattern();
+    public native NSExpression getFillExtrusionPattern();
     @Property(selector = "setFillExtrusionPattern:")
-    public native void setFillExtrusionPattern(MGLStyleValue<NSString> v);
+    public native void setFillExtrusionPattern(NSExpression v);
     @Property(selector = "fillExtrusionPatternTransition")
     public native @ByVal MGLTransition getFillExtrusionPatternTransition();
     @Property(selector = "setFillExtrusionPatternTransition:")
     public native void setFillExtrusionPatternTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionTranslation")
-    public native MGLStyleValue<NSValue> getFillExtrusionTranslation();
+    public native NSExpression getFillExtrusionTranslation();
     @Property(selector = "setFillExtrusionTranslation:")
-    public native void setFillExtrusionTranslation(MGLStyleValue<NSValue> v);
+    public native void setFillExtrusionTranslation(NSExpression v);
     @Property(selector = "fillExtrusionTranslationTransition")
     public native @ByVal MGLTransition getFillExtrusionTranslationTransition();
     @Property(selector = "setFillExtrusionTranslationTransition:")
     public native void setFillExtrusionTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "fillExtrusionTranslationAnchor")
-    public native MGLStyleValue<NSValue> getFillExtrusionTranslationAnchor();
+    public native NSExpression getFillExtrusionTranslationAnchor();
     @Property(selector = "setFillExtrusionTranslationAnchor:")
-    public native void setFillExtrusionTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setFillExtrusionTranslationAnchor(NSExpression v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

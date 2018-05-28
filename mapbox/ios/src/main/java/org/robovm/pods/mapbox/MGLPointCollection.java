@@ -66,7 +66,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "getCoordinates:range:")
     public native void getCoordinates(CLLocationCoordinate2D coords, @ByVal NSRange range);
     @Method(selector = "pointCollectionWithCoordinates:count:")
-    public static native MGLPointCollection pointCollection(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected static native MGLPointCollection nativePointCollection(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "intersectsOverlayBounds:")
     public native boolean intersectsOverlayBounds(@ByVal MGLCoordinateBounds overlayBounds);
     /*</methods>*/

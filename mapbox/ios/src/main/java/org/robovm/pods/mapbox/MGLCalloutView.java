@@ -70,10 +70,12 @@ import org.robovm.apple.coreanimation.*;
     boolean isDismissesAutomatically();
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "presentCalloutFromRect:inView:constrainedToView:animated:")
-    void presentCallout(@ByVal CGRect rect, UIView view, UIView constrainedView, boolean animated);
+    @Method(selector = "presentCalloutFromRect:inView:constrainedToRect:animated:")
+    void presentCalloutFrom(@ByVal CGRect rect, UIView view, @ByVal CGRect constrainedRect, boolean animated);
     @Method(selector = "dismissCalloutAnimated:")
     void dismissCalloutAnimated(boolean animated);
+    @Method(selector = "marginInsetsHintForPresentationFromRect:")
+    @ByVal UIEdgeInsets marginInsetsHintForPresentationFromRect(@ByVal CGRect rect);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

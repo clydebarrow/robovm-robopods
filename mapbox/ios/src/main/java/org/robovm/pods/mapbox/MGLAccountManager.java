@@ -52,15 +52,13 @@ import org.robovm.apple.coreanimation.*;
     protected MGLAccountManager(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "accessToken")
+    public static native String getAccessToken();
+    @Property(selector = "setAccessToken:")
+    public static native void setAccessToken(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "setAccessToken:")
-    public static native void setAccessToken(String accessToken);
-    @Method(selector = "accessToken")
-    public static native String accessToken();
-    @Method(selector = "mapboxMetricsEnabledSettingShownInApp")
-    public static native boolean mapboxMetricsEnabledSettingShownInApp();
+    
     /*</methods>*/
 }

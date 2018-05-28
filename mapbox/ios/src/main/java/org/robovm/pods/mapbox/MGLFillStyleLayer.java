@@ -55,53 +55,53 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "isFillAntialiased")
-    public native MGLStyleValue<NSNumber> getFillAntialiased();
+    public native NSExpression getFillAntialiased();
     @Property(selector = "setFillAntialiased:")
-    public native void setFillAntialiased(MGLStyleValue<NSNumber> v);
+    public native void setFillAntialiased(NSExpression v);
     @Property(selector = "fillColor")
-    public native MGLStyleValue<UIColor> getFillColor();
+    public native NSExpression getFillColor();
     @Property(selector = "setFillColor:")
-    public native void setFillColor(MGLStyleValue<UIColor> v);
+    public native void setFillColor(NSExpression v);
     @Property(selector = "fillColorTransition")
     public native @ByVal MGLTransition getFillColorTransition();
     @Property(selector = "setFillColorTransition:")
     public native void setFillColorTransition(@ByVal MGLTransition v);
     @Property(selector = "fillOpacity")
-    public native MGLStyleValue<NSNumber> getFillOpacity();
+    public native NSExpression getFillOpacity();
     @Property(selector = "setFillOpacity:")
-    public native void setFillOpacity(MGLStyleValue<NSNumber> v);
+    public native void setFillOpacity(NSExpression v);
     @Property(selector = "fillOpacityTransition")
     public native @ByVal MGLTransition getFillOpacityTransition();
     @Property(selector = "setFillOpacityTransition:")
     public native void setFillOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "fillOutlineColor")
-    public native MGLStyleValue<UIColor> getFillOutlineColor();
+    public native NSExpression getFillOutlineColor();
     @Property(selector = "setFillOutlineColor:")
-    public native void setFillOutlineColor(MGLStyleValue<UIColor> v);
+    public native void setFillOutlineColor(NSExpression v);
     @Property(selector = "fillOutlineColorTransition")
     public native @ByVal MGLTransition getFillOutlineColorTransition();
     @Property(selector = "setFillOutlineColorTransition:")
     public native void setFillOutlineColorTransition(@ByVal MGLTransition v);
     @Property(selector = "fillPattern")
-    public native MGLStyleValue<NSString> getFillPattern();
+    public native NSExpression getFillPattern();
     @Property(selector = "setFillPattern:")
-    public native void setFillPattern(MGLStyleValue<NSString> v);
+    public native void setFillPattern(NSExpression v);
     @Property(selector = "fillPatternTransition")
     public native @ByVal MGLTransition getFillPatternTransition();
     @Property(selector = "setFillPatternTransition:")
     public native void setFillPatternTransition(@ByVal MGLTransition v);
     @Property(selector = "fillTranslation")
-    public native MGLStyleValue<NSValue> getFillTranslation();
+    public native NSExpression getFillTranslation();
     @Property(selector = "setFillTranslation:")
-    public native void setFillTranslation(MGLStyleValue<NSValue> v);
+    public native void setFillTranslation(NSExpression v);
     @Property(selector = "fillTranslationTransition")
     public native @ByVal MGLTransition getFillTranslationTransition();
     @Property(selector = "setFillTranslationTransition:")
     public native void setFillTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "fillTranslationAnchor")
-    public native MGLStyleValue<NSValue> getFillTranslationAnchor();
+    public native NSExpression getFillTranslationAnchor();
     @Property(selector = "setFillTranslationAnchor:")
-    public native void setFillTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setFillTranslationAnchor(NSExpression v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

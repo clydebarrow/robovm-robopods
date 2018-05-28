@@ -62,12 +62,14 @@ import org.robovm.apple.coreanimation.*;
     public native void setDelegate(MGLMapViewDelegate v);
     @Property(selector = "style")
     public native MGLStyle getStyle();
-    @Property(selector = "bundledStyleURLs")
-    public native NSArray<NSURL> getBundledStyleURLs();
     @Property(selector = "styleURL")
     public native NSURL getStyleURL();
     @Property(selector = "setStyleURL:")
     public native void setStyleURL(NSURL v);
+    @Property(selector = "showsScale")
+    public native boolean showsScale();
+    @Property(selector = "setShowsScale:")
+    public native void setShowsScale(boolean v);
     @Property(selector = "scaleBar")
     public native UIView getScaleBar();
     @Property(selector = "compassView")
@@ -76,10 +78,6 @@ import org.robovm.apple.coreanimation.*;
     public native UIImageView getLogoView();
     @Property(selector = "attributionButton")
     public native UIButton getAttributionButton();
-    @Property(selector = "styleClasses")
-    public native NSArray<NSString> getStyleClasses();
-    @Property(selector = "setStyleClasses:")
-    public native void setStyleClasses(NSArray<NSString> v);
     @Property(selector = "showsUserLocation")
     public native boolean showsUserLocation();
     @Property(selector = "setShowsUserLocation:")
@@ -124,6 +122,10 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isPitchEnabled();
     @Property(selector = "setPitchEnabled:")
     public native void setPitchEnabled(boolean v);
+    @Property(selector = "isHapticFeedbackEnabled")
+    public native boolean isHapticFeedbackEnabled();
+    @Property(selector = "setHapticFeedbackEnabled:")
+    public native void setHapticFeedbackEnabled(boolean v);
     @Property(selector = "decelerationRate")
     public native @MachineSizedFloat double getDecelerationRate();
     @Property(selector = "setDecelerationRate:")
@@ -174,10 +176,6 @@ import org.robovm.apple.coreanimation.*;
     public native MGLMapDebugMaskOptions getDebugMask();
     @Property(selector = "setDebugMask:")
     public native void setDebugMask(MGLMapDebugMaskOptions v);
-    @Property(selector = "isDebugActive")
-    public native boolean isDebugActive();
-    @Property(selector = "setDebugActive:")
-    public native void setDebugActive(boolean v);
     @Property(selector = "latitude")
     public native double getLatitude();
     @Property(selector = "setLatitude:")
@@ -224,12 +222,6 @@ import org.robovm.apple.coreanimation.*;
     public native void reloadStyle(NSObject sender);
     @Method(selector = "showAttribution:")
     public native void showAttribution(NSObject sender);
-    @Method(selector = "hasStyleClass:")
-    public native boolean hasStyleClass(String styleClass);
-    @Method(selector = "addStyleClass:")
-    public native void addStyleClass(String styleClass);
-    @Method(selector = "removeStyleClass:")
-    public native void removeStyleClass(String styleClass);
     @Method(selector = "setUserTrackingMode:animated:")
     public native void setUserTrackingMode(MGLUserTrackingMode mode, boolean animated);
     @Method(selector = "setUserLocationVerticalAlignment:animated:")
@@ -257,9 +249,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "setVisibleCoordinateBounds:edgePadding:animated:")
     public native void setVisibleCoordinateBounds(@ByVal MGLCoordinateBounds bounds, @ByVal UIEdgeInsets insets, boolean animated);
     @Method(selector = "setVisibleCoordinates:count:edgePadding:animated:")
-    public native void setVisibleCoordinates(CLLocationCoordinate2D coordinates, @MachineSizedUInt long count, @ByVal UIEdgeInsets insets, boolean animated);
+    protected native void nativeSetVisibleCoordinates(CLLocationCoordinate2D coordinates, @MachineSizedUInt long count, @ByVal UIEdgeInsets insets, boolean animated);
     @Method(selector = "setVisibleCoordinates:count:edgePadding:direction:duration:animationTimingFunction:completionHandler:")
-    public native void setVisibleCoordinates(CLLocationCoordinate2D coordinates, @MachineSizedUInt long count, @ByVal UIEdgeInsets insets, double direction, double duration, CAMediaTimingFunction function, @Block Runnable completion);
+    protected native void nativeSetVisibleCoordinates(CLLocationCoordinate2D coordinates, @MachineSizedUInt long count, @ByVal UIEdgeInsets insets, double direction, double duration, CAMediaTimingFunction function, @Block Runnable completion);
     @Method(selector = "showAnnotations:animated:")
     public native void showAnnotations(NSArray<?> annotations, boolean animated);
     @Method(selector = "showAnnotations:edgePadding:animated:")
@@ -298,8 +290,6 @@ import org.robovm.apple.coreanimation.*;
     public native @ByVal CGRect convertCoordinateBounds(@ByVal MGLCoordinateBounds bounds, UIView view);
     @Method(selector = "metersPerPointAtLatitude:")
     public native double metersPerPointAtLatitude(double latitude);
-    @Method(selector = "metersPerPixelAtLatitude:")
-    public native double metersPerPixelAtLatitude(double latitude);
     @Method(selector = "addAnnotation:")
     public native void addAnnotation(MGLAnnotation annotation);
     @Method(selector = "addAnnotations:")
@@ -340,9 +330,15 @@ import org.robovm.apple.coreanimation.*;
     public native NSArray<?> visibleFeatures(@ByVal CGRect rect, NSSet<NSString> styleLayerIdentifiers);
     @Method(selector = "visibleFeaturesInRect:inStyleLayersWithIdentifiers:predicate:")
     public native NSArray<?> visibleFeatures(@ByVal CGRect rect, NSSet<NSString> styleLayerIdentifiers, NSPredicate predicate);
-    @Method(selector = "toggleDebug")
-    public native void toggleDebug();
-    @Method(selector = "emptyMemoryCache")
-    public native void emptyMemoryCache();
     /*</methods>*/
+    public void setVisibleCoordinates(CLLocationCoordinate2D[] coordinates, @ByVal UIEdgeInsets insets, boolean animated) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coordinates.length);
+        value.update(coordinates);
+        nativeSetVisibleCoordinates(value, coordinates.length, insets, animated);
+    }
+    public void setVisibleCoordinates(CLLocationCoordinate2D[] coordinates, @MachineSizedUInt long count, @ByVal UIEdgeInsets insets, double direction, double duration, CAMediaTimingFunction function, @Block Runnable completion) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coordinates.length);
+        value.update(coordinates);
+        nativeSetVisibleCoordinates(value, coordinates.length, insets, direction, duration, function, completion);
+    }
 }

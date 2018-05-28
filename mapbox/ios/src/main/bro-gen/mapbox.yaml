@@ -4,7 +4,10 @@ framework: Mapbox
 clang_args: ['-x', 'objective-c']
 headers:
     - Mapbox.h
-typedefs: {}
+typedefs:
+    MGLTileSourceOption: NSString
+    MGLShapeSourceOption: NSString
+
 enums:
     MGLErrorCode: {nsError: true, prefix: kMGLError}
     MGLAnnotationViewDragState: {}
@@ -38,8 +41,14 @@ enums:
     MGLCircleTranslationAnchor: {}
     MGLTileCoordinateSystem: {}
     MGLAttributionInfoStyle: {}
+    MGLMapPoint: {}
+    MGLMatrix4: {}
+    MGLHillshadeIlluminationAnchor: {}
+    MGLDEMEncoding: {}
 
 classes:
+    MGLMapPoint: {} #struct
+    MGLMatrix4: {}  #struct
     MGLCoordinateBounds: {}
     MGLCoordinateQuad: {}
     MGLCoordinateSpan: {}
@@ -207,9 +216,11 @@ classes:
             '-setVisibleCoordinateBounds:edgePadding:animated:':
                 name: setVisibleCoordinateBounds
             '-setVisibleCoordinates:count:edgePadding:animated:':
-                name: setVisibleCoordinates
+                name: nativeSetVisibleCoordinates
+                visibility: protected
             '-setVisibleCoordinates:count:edgePadding:direction:duration:animationTimingFunction:completionHandler:':
-                name: setVisibleCoordinates
+                name: nativeSetVisibleCoordinates
+                visibility: protected
             '-showAnnotations:animated:':
                 name: showAnnotations
             '-showAnnotations:edgePadding:animated:':
@@ -254,20 +265,35 @@ classes:
                 name: visibleFeatures
             '-visibleFeaturesInRect:inStyleLayersWithIdentifiers:predicate:':
                 name: visibleFeatures
+
     MGLMultiPoint:
+        properties:
+            'coordinates':
+                name: nativeCoordinates
+                visibility: protected
         methods:
             '-getCoordinates:range:':
-                name: getCoordinates
+                name: nativeGetCoordinates
+                visibility: protected
             '-setCoordinates:count:':
-                name: setCoordinates
+                name: nativeSetCoordinates
+                visibility: protected
             '-insertCoordinates:count:atIndex:':
-                name: insertCoordinates
+                name: nativeInsertCoordinates
+                visibility: protected
             '-appendCoordinates:count:':
-                name: appendCoordinates
+                name: nativeAppendCoordinates
+                visibility: protected
             '-replaceCoordinatesInRange:withCoordinates:':
-                name: replaceCoordinates
+                name: nativeReplaceCoordinates
+                visibility: protected
             '-replaceCoordinatesInRange:withCoordinates:count:':
-                name: replaceCoordinates
+                name: nativeReplaceCoordinates
+                visibility: protected
+            '-removeCoordinatesInRange:':
+                name: nativeRemoveCoordinates
+                visibility: protected
+
     MGLMultiPolygon:
         methods:
             '+multiPolygonWithPolygons:':
@@ -297,20 +323,27 @@ classes:
             '-getCoordinates:range:':
                 name: getCoordinates
             '+pointCollectionWithCoordinates:count:':
-                name: pointCollection
+                name: nativePointCollection
+                visibility: protected
+
     MGLPointCollectionFeature: {}
     MGLPointFeature: {}
     MGLPolygon:
         methods:
             '+polygonWithCoordinates:count:':
-                name: polygon
+                name: nativePolygon
+                visibility: protected
             '+polygonWithCoordinates:count:interiorPolygons:':
-                name: polygon
+                name: nativePolygon
+                visibility: protected
+
     MGLPolygonFeature: {}
     MGLPolyline:
         methods:
             '+polylineWithCoordinates:count:':
-                name: polyline
+                name: nativePolyline
+                visibility: protected
+
     MGLPolylineFeature: {}
     MGLRasterSource:
         methods:
@@ -613,6 +646,55 @@ classes:
                 name: features
     MGLVectorStyleLayer: {}
 
+    MGLComputedShapeSource:
+        methods:
+            '-initWithIdentifier:options:':
+                #trim_after_first_colon: true
+                name: init
+            '-initWithIdentifier:dataSource:options:':
+                #trim_after_first_colon: true
+                name: init
+            '-invalidateTileAtX:y:zoomLevel:':
+                #trim_after_first_colon: true
+                name: invalidateTile
+            '-setFeatures:inTileAtX:y:zoomLevel:':
+                #trim_after_first_colon: true
+                name: setFeatures
+    MGLHeatmapStyleLayer:
+        methods:
+            '-initWithIdentifier:source:':
+                #trim_after_first_colon: true
+                name: init
+    MGLHillshadeStyleLayer:
+        methods:
+            '-initWithIdentifier:source:':
+                #trim_after_first_colon: true
+                name: init
+    MGLRasterDEMSource: {}
+    MGLRasterTileSource:
+        methods:
+            '-initWithIdentifier:configurationURL:':
+                #trim_after_first_colon: true
+                name: init
+            '-initWithIdentifier:configurationURL:tileSize:':
+                #trim_after_first_colon: true
+                name: init
+            '-initWithIdentifier:tileURLTemplates:options:':
+                #trim_after_first_colon: true
+                name: init
+    MGLVectorTileSource:
+        methods:
+            '-initWithIdentifier:configurationURL:':
+                #trim_after_first_colon: true
+                name: init
+            '-initWithIdentifier:tileURLTemplates:options:':
+                #trim_after_first_colon: true
+                name: init
+            '-featuresInSourceLayersWithIdentifiers:predicate:':
+                #trim_after_first_colon: true
+                name: featuresInSourceLayers
+
+
 
 
 protocols:
@@ -694,9 +776,28 @@ protocols:
             '-offlineStorage:URLForResourceOfKind:withURL:':
                 name: URLForResourceOfKind
 
+    MGLComputedShapeSourceDataSource:
+        methods:
+            '-featuresInTileAtX:y:zoomLevel:':
+                #trim_after_first_colon: true
+                name: featuresInTileAt
+            '-featuresInCoordinateBounds:zoomLevel:':
+                #trim_after_first_colon: true
+                name: featuresInCoordinateBounds
+    MGLCalloutView:
+        methods:
+            '-presentCalloutFromRect:inView:constrainedToRect:animated:':
+                #trim_after_first_colon: true
+                name: presentCalloutFrom
 
 
 functions:
+
+    
+    MGLMapPointForCoordinate:
+        class: MGLMapPoint
+        name: 'forCoordinate'
+
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (MGL.*):
         class: FIXME
@@ -749,7 +850,17 @@ values:
         type: Option
         name: '#{g[0]}'
 
+    MGLExpressionInterpolationModeLinear:
+        class: Mapbox
+        name: 'MGLExpressionInterpolationModeLinear'
 
+    MGLExpressionInterpolationModeExponential:
+        class: Mapbox
+        name: 'MGLExpressionInterpolationModeExponential'
+
+    MGLExpressionInterpolationModeCubicBezier:
+        class: Mapbox
+        name: 'MGLExpressionInterpolationModeCubicBezier'
 
     # Make sure we don't miss any values if new ones are introduced in a later version
     k?(MGL.*):
@@ -816,4 +927,5 @@ constants:
     k?(MGL.*):
         class: FIXME
         name: 'Constant__#{g[0]}'
+
 

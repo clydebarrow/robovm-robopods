@@ -53,25 +53,68 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "coordinates")
-    public native CLLocationCoordinate2D getCoordinates();
+    protected native CLLocationCoordinate2D getNativeCoordinates();
     @Property(selector = "pointCount")
     public native @MachineSizedUInt long getPointCount();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "getCoordinates:range:")
-    public native void getCoordinates(CLLocationCoordinate2D coords, @ByVal NSRange range);
+    protected native void nativeGetCoordinates(CLLocationCoordinate2D coords, @ByVal NSRange range);
     @Method(selector = "setCoordinates:count:")
-    public native void setCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected native void nativeSetCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "insertCoordinates:count:atIndex:")
-    public native void insertCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count, @MachineSizedUInt long index);
+    protected native void nativeInsertCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count, @MachineSizedUInt long index);
     @Method(selector = "appendCoordinates:count:")
-    public native void appendCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected native void nativeAppendCoordinates(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "replaceCoordinatesInRange:withCoordinates:")
-    public native void replaceCoordinates(@ByVal NSRange range, CLLocationCoordinate2D coords);
+    protected native void nativeReplaceCoordinates(@ByVal NSRange range, CLLocationCoordinate2D coords);
     @Method(selector = "replaceCoordinatesInRange:withCoordinates:count:")
-    public native void replaceCoordinates(@ByVal NSRange range, CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected native void nativeReplaceCoordinates(@ByVal NSRange range, CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "removeCoordinatesInRange:")
-    public native void removeCoordinatesInRange(@ByVal NSRange range);
+    protected native void nativeRemoveCoordinates(@ByVal NSRange range);
     /*</methods>*/
+
+    public CLLocationCoordinate2D[] getCoordinates(int start, int count) {
+        int available = (int)getPointCount() - start;
+        if(available > count)
+            available = count;
+        if(available <= 0)
+            return new CLLocationCoordinate2D[0];
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, available);
+        nativeGetCoordinates(value, new NSRange(start, available));
+        return value.toArray(available);
+    }
+
+    public CLLocationCoordinate2D[] getCoordinates() {
+        return getCoordinates(0, (int)getPointCount());
+    }
+
+    public void setCoordinates(CLLocationCoordinate2D[] coords) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        nativeSetCoordinates(value, coords.length);
+    }
+
+    public void insertCoordinates(CLLocationCoordinate2D[] coords, int position) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        nativeInsertCoordinates(value, coords.length, position);
+    }
+
+    public void appendCoordinates(CLLocationCoordinate2D[] coords) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        nativeAppendCoordinates(value, coords.length);
+    }
+
+    public void replaceCoordinates(CLLocationCoordinate2D[] coords, int position, int length) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        nativeReplaceCoordinates(new NSRange(position, length), value, coords.length);
+    }
+
+    public void removeCoordinates(int position, int length) {
+        nativeRemoveCoordinates(new NSRange(position, length));
+    }
 }

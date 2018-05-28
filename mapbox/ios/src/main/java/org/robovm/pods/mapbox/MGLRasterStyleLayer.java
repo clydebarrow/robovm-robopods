@@ -55,57 +55,53 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "maximumRasterBrightness")
-    public native MGLStyleValue<NSNumber> getMaximumRasterBrightness();
+    public native NSExpression getMaximumRasterBrightness();
     @Property(selector = "setMaximumRasterBrightness:")
-    public native void setMaximumRasterBrightness(MGLStyleValue<NSNumber> v);
+    public native void setMaximumRasterBrightness(NSExpression v);
     @Property(selector = "maximumRasterBrightnessTransition")
     public native @ByVal MGLTransition getMaximumRasterBrightnessTransition();
     @Property(selector = "setMaximumRasterBrightnessTransition:")
     public native void setMaximumRasterBrightnessTransition(@ByVal MGLTransition v);
     @Property(selector = "minimumRasterBrightness")
-    public native MGLStyleValue<NSNumber> getMinimumRasterBrightness();
+    public native NSExpression getMinimumRasterBrightness();
     @Property(selector = "setMinimumRasterBrightness:")
-    public native void setMinimumRasterBrightness(MGLStyleValue<NSNumber> v);
+    public native void setMinimumRasterBrightness(NSExpression v);
     @Property(selector = "minimumRasterBrightnessTransition")
     public native @ByVal MGLTransition getMinimumRasterBrightnessTransition();
     @Property(selector = "setMinimumRasterBrightnessTransition:")
     public native void setMinimumRasterBrightnessTransition(@ByVal MGLTransition v);
     @Property(selector = "rasterContrast")
-    public native MGLStyleValue<NSNumber> getRasterContrast();
+    public native NSExpression getRasterContrast();
     @Property(selector = "setRasterContrast:")
-    public native void setRasterContrast(MGLStyleValue<NSNumber> v);
+    public native void setRasterContrast(NSExpression v);
     @Property(selector = "rasterContrastTransition")
     public native @ByVal MGLTransition getRasterContrastTransition();
     @Property(selector = "setRasterContrastTransition:")
     public native void setRasterContrastTransition(@ByVal MGLTransition v);
     @Property(selector = "rasterFadeDuration")
-    public native MGLStyleValue<NSNumber> getRasterFadeDuration();
+    public native NSExpression getRasterFadeDuration();
     @Property(selector = "setRasterFadeDuration:")
-    public native void setRasterFadeDuration(MGLStyleValue<NSNumber> v);
-    @Property(selector = "rasterFadeDurationTransition")
-    public native @ByVal MGLTransition getRasterFadeDurationTransition();
-    @Property(selector = "setRasterFadeDurationTransition:")
-    public native void setRasterFadeDurationTransition(@ByVal MGLTransition v);
+    public native void setRasterFadeDuration(NSExpression v);
     @Property(selector = "rasterHueRotation")
-    public native MGLStyleValue<NSNumber> getRasterHueRotation();
+    public native NSExpression getRasterHueRotation();
     @Property(selector = "setRasterHueRotation:")
-    public native void setRasterHueRotation(MGLStyleValue<NSNumber> v);
+    public native void setRasterHueRotation(NSExpression v);
     @Property(selector = "rasterHueRotationTransition")
     public native @ByVal MGLTransition getRasterHueRotationTransition();
     @Property(selector = "setRasterHueRotationTransition:")
     public native void setRasterHueRotationTransition(@ByVal MGLTransition v);
     @Property(selector = "rasterOpacity")
-    public native MGLStyleValue<NSNumber> getRasterOpacity();
+    public native NSExpression getRasterOpacity();
     @Property(selector = "setRasterOpacity:")
-    public native void setRasterOpacity(MGLStyleValue<NSNumber> v);
+    public native void setRasterOpacity(NSExpression v);
     @Property(selector = "rasterOpacityTransition")
     public native @ByVal MGLTransition getRasterOpacityTransition();
     @Property(selector = "setRasterOpacityTransition:")
     public native void setRasterOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "rasterSaturation")
-    public native MGLStyleValue<NSNumber> getRasterSaturation();
+    public native NSExpression getRasterSaturation();
     @Property(selector = "setRasterSaturation:")
-    public native void setRasterSaturation(MGLStyleValue<NSNumber> v);
+    public native void setRasterSaturation(NSExpression v);
     @Property(selector = "rasterSaturationTransition")
     public native @ByVal MGLTransition getRasterSaturationTransition();
     @Property(selector = "setRasterSaturationTransition:")

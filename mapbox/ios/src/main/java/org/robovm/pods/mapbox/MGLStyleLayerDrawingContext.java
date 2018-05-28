@@ -49,13 +49,14 @@ import org.robovm.apple.coreanimation.*;
     /*<constants>*//*</constants>*/
     /*<constructors>*/
     public MGLStyleLayerDrawingContext() {}
-    public MGLStyleLayerDrawingContext(CGSize size, CLLocationCoordinate2D centerCoordinate, double zoomLevel, double direction, @MachineSizedFloat double pitch, @MachineSizedFloat double fieldOfView) {
+    public MGLStyleLayerDrawingContext(CGSize size, CLLocationCoordinate2D centerCoordinate, double zoomLevel, double direction, @MachineSizedFloat double pitch, @MachineSizedFloat double fieldOfView, MGLMatrix4 projectionMatrix) {
         this.setSize(size);
         this.setCenterCoordinate(centerCoordinate);
         this.setZoomLevel(zoomLevel);
         this.setDirection(direction);
         this.setPitch(pitch);
         this.setFieldOfView(fieldOfView);
+        this.setProjectionMatrix(projectionMatrix);
     }
     /*</constructors>*/
     /*<properties>*//*</properties>*/
@@ -72,6 +73,8 @@ import org.robovm.apple.coreanimation.*;
     @StructMember(4) public native MGLStyleLayerDrawingContext setPitch(@MachineSizedFloat double pitch);
     @StructMember(5) public native @MachineSizedFloat double getFieldOfView();
     @StructMember(5) public native MGLStyleLayerDrawingContext setFieldOfView(@MachineSizedFloat double fieldOfView);
+    @StructMember(6) public native @ByVal MGLMatrix4 getProjectionMatrix();
+    @StructMember(6) public native MGLStyleLayerDrawingContext setProjectionMatrix(@ByVal MGLMatrix4 projectionMatrix);
     /*</members>*/
     /*<methods>*//*</methods>*/
 }

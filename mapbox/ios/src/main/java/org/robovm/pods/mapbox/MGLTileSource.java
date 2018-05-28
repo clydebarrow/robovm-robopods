@@ -73,6 +73,8 @@ import org.robovm.apple.coreanimation.*;
     public static native Option TileCoordinateSystem();
     @GlobalValue(symbol="MGLTileSourceOptionTileSize", optional=true)
     public static native Option TileSize();
+    @GlobalValue(symbol="MGLTileSourceOptionDEMEncoding", optional=true)
+    public static native Option DEMEncoding();
     
     
     /*</methods>*/
