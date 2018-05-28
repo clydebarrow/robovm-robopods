@@ -55,81 +55,81 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "circleBlur")
-    public native MGLStyleValue<NSNumber> getCircleBlur();
+    public native NSExpression getCircleBlur();
     @Property(selector = "setCircleBlur:")
-    public native void setCircleBlur(MGLStyleValue<NSNumber> v);
+    public native void setCircleBlur(NSExpression v);
     @Property(selector = "circleBlurTransition")
     public native @ByVal MGLTransition getCircleBlurTransition();
     @Property(selector = "setCircleBlurTransition:")
     public native void setCircleBlurTransition(@ByVal MGLTransition v);
     @Property(selector = "circleColor")
-    public native MGLStyleValue<UIColor> getCircleColor();
+    public native NSExpression getCircleColor();
     @Property(selector = "setCircleColor:")
-    public native void setCircleColor(MGLStyleValue<UIColor> v);
+    public native void setCircleColor(NSExpression v);
     @Property(selector = "circleColorTransition")
     public native @ByVal MGLTransition getCircleColorTransition();
     @Property(selector = "setCircleColorTransition:")
     public native void setCircleColorTransition(@ByVal MGLTransition v);
     @Property(selector = "circleOpacity")
-    public native MGLStyleValue<NSNumber> getCircleOpacity();
+    public native NSExpression getCircleOpacity();
     @Property(selector = "setCircleOpacity:")
-    public native void setCircleOpacity(MGLStyleValue<NSNumber> v);
+    public native void setCircleOpacity(NSExpression v);
     @Property(selector = "circleOpacityTransition")
     public native @ByVal MGLTransition getCircleOpacityTransition();
     @Property(selector = "setCircleOpacityTransition:")
     public native void setCircleOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "circlePitchAlignment")
-    public native MGLStyleValue<NSValue> getCirclePitchAlignment();
+    public native NSExpression getCirclePitchAlignment();
     @Property(selector = "setCirclePitchAlignment:")
-    public native void setCirclePitchAlignment(MGLStyleValue<NSValue> v);
+    public native void setCirclePitchAlignment(NSExpression v);
     @Property(selector = "circleRadius")
-    public native MGLStyleValue<NSNumber> getCircleRadius();
+    public native NSExpression getCircleRadius();
     @Property(selector = "setCircleRadius:")
-    public native void setCircleRadius(MGLStyleValue<NSNumber> v);
+    public native void setCircleRadius(NSExpression v);
     @Property(selector = "circleRadiusTransition")
     public native @ByVal MGLTransition getCircleRadiusTransition();
     @Property(selector = "setCircleRadiusTransition:")
     public native void setCircleRadiusTransition(@ByVal MGLTransition v);
     @Property(selector = "circleScaleAlignment")
-    public native MGLStyleValue<NSValue> getCircleScaleAlignment();
+    public native NSExpression getCircleScaleAlignment();
     @Property(selector = "setCircleScaleAlignment:")
-    public native void setCircleScaleAlignment(MGLStyleValue<NSValue> v);
+    public native void setCircleScaleAlignment(NSExpression v);
     @Property(selector = "circleStrokeColor")
-    public native MGLStyleValue<UIColor> getCircleStrokeColor();
+    public native NSExpression getCircleStrokeColor();
     @Property(selector = "setCircleStrokeColor:")
-    public native void setCircleStrokeColor(MGLStyleValue<UIColor> v);
+    public native void setCircleStrokeColor(NSExpression v);
     @Property(selector = "circleStrokeColorTransition")
     public native @ByVal MGLTransition getCircleStrokeColorTransition();
     @Property(selector = "setCircleStrokeColorTransition:")
     public native void setCircleStrokeColorTransition(@ByVal MGLTransition v);
     @Property(selector = "circleStrokeOpacity")
-    public native MGLStyleValue<NSNumber> getCircleStrokeOpacity();
+    public native NSExpression getCircleStrokeOpacity();
     @Property(selector = "setCircleStrokeOpacity:")
-    public native void setCircleStrokeOpacity(MGLStyleValue<NSNumber> v);
+    public native void setCircleStrokeOpacity(NSExpression v);
     @Property(selector = "circleStrokeOpacityTransition")
     public native @ByVal MGLTransition getCircleStrokeOpacityTransition();
     @Property(selector = "setCircleStrokeOpacityTransition:")
     public native void setCircleStrokeOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "circleStrokeWidth")
-    public native MGLStyleValue<NSNumber> getCircleStrokeWidth();
+    public native NSExpression getCircleStrokeWidth();
     @Property(selector = "setCircleStrokeWidth:")
-    public native void setCircleStrokeWidth(MGLStyleValue<NSNumber> v);
+    public native void setCircleStrokeWidth(NSExpression v);
     @Property(selector = "circleStrokeWidthTransition")
     public native @ByVal MGLTransition getCircleStrokeWidthTransition();
     @Property(selector = "setCircleStrokeWidthTransition:")
     public native void setCircleStrokeWidthTransition(@ByVal MGLTransition v);
     @Property(selector = "circleTranslation")
-    public native MGLStyleValue<NSValue> getCircleTranslation();
+    public native NSExpression getCircleTranslation();
     @Property(selector = "setCircleTranslation:")
-    public native void setCircleTranslation(MGLStyleValue<NSValue> v);
+    public native void setCircleTranslation(NSExpression v);
     @Property(selector = "circleTranslationTransition")
     public native @ByVal MGLTransition getCircleTranslationTransition();
     @Property(selector = "setCircleTranslationTransition:")
     public native void setCircleTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "circleTranslationAnchor")
-    public native MGLStyleValue<NSValue> getCircleTranslationAnchor();
+    public native NSExpression getCircleTranslationAnchor();
     @Property(selector = "setCircleTranslationAnchor:")
-    public native void setCircleTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setCircleTranslationAnchor(NSExpression v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

@@ -55,25 +55,25 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "backgroundColor")
-    public native MGLStyleValue<UIColor> getBackgroundColor();
+    public native NSExpression getBackgroundColor();
     @Property(selector = "setBackgroundColor:")
-    public native void setBackgroundColor(MGLStyleValue<UIColor> v);
+    public native void setBackgroundColor(NSExpression v);
     @Property(selector = "backgroundColorTransition")
     public native @ByVal MGLTransition getBackgroundColorTransition();
     @Property(selector = "setBackgroundColorTransition:")
     public native void setBackgroundColorTransition(@ByVal MGLTransition v);
     @Property(selector = "backgroundOpacity")
-    public native MGLStyleValue<NSNumber> getBackgroundOpacity();
+    public native NSExpression getBackgroundOpacity();
     @Property(selector = "setBackgroundOpacity:")
-    public native void setBackgroundOpacity(MGLStyleValue<NSNumber> v);
+    public native void setBackgroundOpacity(NSExpression v);
     @Property(selector = "backgroundOpacityTransition")
     public native @ByVal MGLTransition getBackgroundOpacityTransition();
     @Property(selector = "setBackgroundOpacityTransition:")
     public native void setBackgroundOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "backgroundPattern")
-    public native MGLStyleValue<NSString> getBackgroundPattern();
+    public native NSExpression getBackgroundPattern();
     @Property(selector = "setBackgroundPattern:")
-    public native void setBackgroundPattern(MGLStyleValue<NSString> v);
+    public native void setBackgroundPattern(NSExpression v);
     @Property(selector = "backgroundPatternTransition")
     public native @ByVal MGLTransition getBackgroundPatternTransition();
     @Property(selector = "setBackgroundPatternTransition:")

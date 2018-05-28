@@ -52,6 +52,18 @@ import org.robovm.apple.coreanimation.*;
     protected MGLStyle(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "streetsStyleURL")
+    public static native NSURL getStreetsStyleURL();
+    @Property(selector = "outdoorsStyleURL")
+    public static native NSURL getOutdoorsStyleURL();
+    @Property(selector = "lightStyleURL")
+    public static native NSURL getLightStyleURL();
+    @Property(selector = "darkStyleURL")
+    public static native NSURL getDarkStyleURL();
+    @Property(selector = "satelliteStyleURL")
+    public static native NSURL getSatelliteStyleURL();
+    @Property(selector = "satelliteStreetsStyleURL")
+    public static native NSURL getSatelliteStreetsStyleURL();
     @Property(selector = "name")
     public native String getName();
     @Property(selector = "sources")
@@ -66,18 +78,10 @@ import org.robovm.apple.coreanimation.*;
     public native NSArray<MGLStyleLayer> getLayers();
     @Property(selector = "setLayers:")
     public native void setLayers(NSArray<MGLStyleLayer> v);
-    @Property(selector = "styleClasses")
-    public native NSArray<NSString> getStyleClasses();
-    @Property(selector = "setStyleClasses:")
-    public native void setStyleClasses(NSArray<NSString> v);
     @Property(selector = "light")
     public native MGLLight getLight();
     @Property(selector = "setLight:")
     public native void setLight(MGLLight v);
-    @Property(selector = "localizesLabels")
-    public native boolean isLocalizesLabels();
-    @Property(selector = "setLocalizesLabels:")
-    public native void setLocalizesLabels(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -99,54 +103,26 @@ import org.robovm.apple.coreanimation.*;
     public native void insertLayerAbove(MGLStyleLayer layer, MGLStyleLayer sibling);
     @Method(selector = "removeLayer:")
     public native void removeLayer(MGLStyleLayer layer);
-    @Method(selector = "hasStyleClass:")
-    public native boolean hasStyleClass(String styleClass);
-    @Method(selector = "addStyleClass:")
-    public native void addStyleClass(String styleClass);
-    @Method(selector = "removeStyleClass:")
-    public native void removeStyleClass(String styleClass);
     @Method(selector = "imageForName:")
     public native UIImage image(String name);
     @Method(selector = "setImage:forName:")
     public native void setImage(UIImage image, String name);
     @Method(selector = "removeImageForName:")
     public native void removeImage(String name);
-    @Method(selector = "streetsStyleURL")
-    public static native NSURL streetsStyleURL();
+    @Method(selector = "localizeLabelsIntoLocale:")
+    public native void localizeLabelsIntoLocale(NSLocale locale);
     @Method(selector = "streetsStyleURLWithVersion:")
     public static native NSURL streetsStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "emeraldStyleURL")
-    public static native NSURL emeraldStyleURL();
-    @Method(selector = "outdoorsStyleURL")
-    public static native NSURL outdoorsStyleURL();
     @Method(selector = "outdoorsStyleURLWithVersion:")
     public static native NSURL outdoorsStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "lightStyleURL")
-    public static native NSURL lightStyleURL();
     @Method(selector = "lightStyleURLWithVersion:")
     public static native NSURL lightStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "darkStyleURL")
-    public static native NSURL darkStyleURL();
     @Method(selector = "darkStyleURLWithVersion:")
     public static native NSURL darkStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "satelliteStyleURL")
-    public static native NSURL satelliteStyleURL();
     @Method(selector = "satelliteStyleURLWithVersion:")
     public static native NSURL satelliteStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "hybridStyleURL")
-    public static native NSURL hybridStyleURL();
-    @Method(selector = "satelliteStreetsStyleURL")
-    public static native NSURL satelliteStreetsStyleURL();
     @Method(selector = "satelliteStreetsStyleURLWithVersion:")
     public static native NSURL satelliteStreetsStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "trafficDayStyleURL")
-    public static native NSURL trafficDayStyleURL();
-    @Method(selector = "trafficDayStyleURLWithVersion:")
-    public static native NSURL trafficDayStyleURL(@MachineSizedSInt long version);
-    @Method(selector = "trafficNightStyleURL")
-    public static native NSURL trafficNightStyleURL();
-    @Method(selector = "trafficNightStyleURLWithVersion:")
-    public static native NSURL trafficNightStyleURL(@MachineSizedSInt long version);
     /*</methods>*/
 
     /*

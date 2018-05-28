@@ -55,253 +55,253 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "iconAllowsOverlap")
-    public native MGLStyleValue<NSNumber> getIconAllowsOverlap();
+    public native NSExpression getIconAllowsOverlap();
     @Property(selector = "setIconAllowsOverlap:")
-    public native void setIconAllowsOverlap(MGLStyleValue<NSNumber> v);
+    public native void setIconAllowsOverlap(NSExpression v);
     @Property(selector = "iconAnchor")
-    public native MGLStyleValue<NSValue> getIconAnchor();
+    public native NSExpression getIconAnchor();
     @Property(selector = "setIconAnchor:")
-    public native void setIconAnchor(MGLStyleValue<NSValue> v);
+    public native void setIconAnchor(NSExpression v);
     @Property(selector = "iconIgnoresPlacement")
-    public native MGLStyleValue<NSNumber> getIconIgnoresPlacement();
+    public native NSExpression getIconIgnoresPlacement();
     @Property(selector = "setIconIgnoresPlacement:")
-    public native void setIconIgnoresPlacement(MGLStyleValue<NSNumber> v);
+    public native void setIconIgnoresPlacement(NSExpression v);
     @Property(selector = "iconImageName")
-    public native MGLStyleValue<NSString> getIconImageName();
+    public native NSExpression getIconImageName();
     @Property(selector = "setIconImageName:")
-    public native void setIconImageName(MGLStyleValue<NSString> v);
+    public native void setIconImageName(NSExpression v);
     @Property(selector = "iconOffset")
-    public native MGLStyleValue<NSValue> getIconOffset();
+    public native NSExpression getIconOffset();
     @Property(selector = "setIconOffset:")
-    public native void setIconOffset(MGLStyleValue<NSValue> v);
+    public native void setIconOffset(NSExpression v);
     @Property(selector = "isIconOptional")
-    public native MGLStyleValue<NSNumber> getIconOptional();
+    public native NSExpression getIconOptional();
     @Property(selector = "setIconOptional:")
-    public native void setIconOptional(MGLStyleValue<NSNumber> v);
+    public native void setIconOptional(NSExpression v);
     @Property(selector = "iconPadding")
-    public native MGLStyleValue<NSNumber> getIconPadding();
+    public native NSExpression getIconPadding();
     @Property(selector = "setIconPadding:")
-    public native void setIconPadding(MGLStyleValue<NSNumber> v);
+    public native void setIconPadding(NSExpression v);
     @Property(selector = "iconPitchAlignment")
-    public native MGLStyleValue<NSValue> getIconPitchAlignment();
+    public native NSExpression getIconPitchAlignment();
     @Property(selector = "setIconPitchAlignment:")
-    public native void setIconPitchAlignment(MGLStyleValue<NSValue> v);
+    public native void setIconPitchAlignment(NSExpression v);
     @Property(selector = "iconRotation")
-    public native MGLStyleValue<NSNumber> getIconRotation();
+    public native NSExpression getIconRotation();
     @Property(selector = "setIconRotation:")
-    public native void setIconRotation(MGLStyleValue<NSNumber> v);
+    public native void setIconRotation(NSExpression v);
     @Property(selector = "iconRotationAlignment")
-    public native MGLStyleValue<NSValue> getIconRotationAlignment();
+    public native NSExpression getIconRotationAlignment();
     @Property(selector = "setIconRotationAlignment:")
-    public native void setIconRotationAlignment(MGLStyleValue<NSValue> v);
+    public native void setIconRotationAlignment(NSExpression v);
     @Property(selector = "iconScale")
-    public native MGLStyleValue<NSNumber> getIconScale();
+    public native NSExpression getIconScale();
     @Property(selector = "setIconScale:")
-    public native void setIconScale(MGLStyleValue<NSNumber> v);
+    public native void setIconScale(NSExpression v);
     @Property(selector = "iconTextFit")
-    public native MGLStyleValue<NSValue> getIconTextFit();
+    public native NSExpression getIconTextFit();
     @Property(selector = "setIconTextFit:")
-    public native void setIconTextFit(MGLStyleValue<NSValue> v);
+    public native void setIconTextFit(NSExpression v);
     @Property(selector = "iconTextFitPadding")
-    public native MGLStyleValue<NSValue> getIconTextFitPadding();
+    public native NSExpression getIconTextFitPadding();
     @Property(selector = "setIconTextFitPadding:")
-    public native void setIconTextFitPadding(MGLStyleValue<NSValue> v);
+    public native void setIconTextFitPadding(NSExpression v);
     @Property(selector = "keepsIconUpright")
-    public native MGLStyleValue<NSNumber> getKeepsIconUpright();
+    public native NSExpression getKeepsIconUpright();
     @Property(selector = "setKeepsIconUpright:")
-    public native void setKeepsIconUpright(MGLStyleValue<NSNumber> v);
+    public native void setKeepsIconUpright(NSExpression v);
     @Property(selector = "keepsTextUpright")
-    public native MGLStyleValue<NSNumber> getKeepsTextUpright();
+    public native NSExpression getKeepsTextUpright();
     @Property(selector = "setKeepsTextUpright:")
-    public native void setKeepsTextUpright(MGLStyleValue<NSNumber> v);
+    public native void setKeepsTextUpright(NSExpression v);
     @Property(selector = "maximumTextAngle")
-    public native MGLStyleValue<NSNumber> getMaximumTextAngle();
+    public native NSExpression getMaximumTextAngle();
     @Property(selector = "setMaximumTextAngle:")
-    public native void setMaximumTextAngle(MGLStyleValue<NSNumber> v);
+    public native void setMaximumTextAngle(NSExpression v);
     @Property(selector = "maximumTextWidth")
-    public native MGLStyleValue<NSNumber> getMaximumTextWidth();
+    public native NSExpression getMaximumTextWidth();
     @Property(selector = "setMaximumTextWidth:")
-    public native void setMaximumTextWidth(MGLStyleValue<NSNumber> v);
+    public native void setMaximumTextWidth(NSExpression v);
     @Property(selector = "symbolAvoidsEdges")
-    public native MGLStyleValue<NSNumber> getSymbolAvoidsEdges();
+    public native NSExpression getSymbolAvoidsEdges();
     @Property(selector = "setSymbolAvoidsEdges:")
-    public native void setSymbolAvoidsEdges(MGLStyleValue<NSNumber> v);
+    public native void setSymbolAvoidsEdges(NSExpression v);
     @Property(selector = "symbolPlacement")
-    public native MGLStyleValue<NSValue> getSymbolPlacement();
+    public native NSExpression getSymbolPlacement();
     @Property(selector = "setSymbolPlacement:")
-    public native void setSymbolPlacement(MGLStyleValue<NSValue> v);
+    public native void setSymbolPlacement(NSExpression v);
     @Property(selector = "symbolSpacing")
-    public native MGLStyleValue<NSNumber> getSymbolSpacing();
+    public native NSExpression getSymbolSpacing();
     @Property(selector = "setSymbolSpacing:")
-    public native void setSymbolSpacing(MGLStyleValue<NSNumber> v);
+    public native void setSymbolSpacing(NSExpression v);
     @Property(selector = "text")
-    public native MGLStyleValue<NSString> getText();
+    public native NSExpression getText();
     @Property(selector = "setText:")
-    public native void setText(MGLStyleValue<NSString> v);
+    public native void setText(NSExpression v);
     @Property(selector = "textAllowsOverlap")
-    public native MGLStyleValue<NSNumber> getTextAllowsOverlap();
+    public native NSExpression getTextAllowsOverlap();
     @Property(selector = "setTextAllowsOverlap:")
-    public native void setTextAllowsOverlap(MGLStyleValue<NSNumber> v);
+    public native void setTextAllowsOverlap(NSExpression v);
     @Property(selector = "textAnchor")
-    public native MGLStyleValue<NSValue> getTextAnchor();
+    public native NSExpression getTextAnchor();
     @Property(selector = "setTextAnchor:")
-    public native void setTextAnchor(MGLStyleValue<NSValue> v);
+    public native void setTextAnchor(NSExpression v);
     @Property(selector = "textFontNames")
-    public native MGLStyleValue getTextFontNames();
+    public native NSExpression getTextFontNames();
     @Property(selector = "setTextFontNames:")
-    public native void setTextFontNames(MGLStyleValue v);
+    public native void setTextFontNames(NSExpression v);
     @Property(selector = "textFontSize")
-    public native MGLStyleValue<NSNumber> getTextFontSize();
+    public native NSExpression getTextFontSize();
     @Property(selector = "setTextFontSize:")
-    public native void setTextFontSize(MGLStyleValue<NSNumber> v);
+    public native void setTextFontSize(NSExpression v);
     @Property(selector = "textIgnoresPlacement")
-    public native MGLStyleValue<NSNumber> getTextIgnoresPlacement();
+    public native NSExpression getTextIgnoresPlacement();
     @Property(selector = "setTextIgnoresPlacement:")
-    public native void setTextIgnoresPlacement(MGLStyleValue<NSNumber> v);
+    public native void setTextIgnoresPlacement(NSExpression v);
     @Property(selector = "textJustification")
-    public native MGLStyleValue<NSValue> getTextJustification();
+    public native NSExpression getTextJustification();
     @Property(selector = "setTextJustification:")
-    public native void setTextJustification(MGLStyleValue<NSValue> v);
+    public native void setTextJustification(NSExpression v);
     @Property(selector = "textLetterSpacing")
-    public native MGLStyleValue<NSNumber> getTextLetterSpacing();
+    public native NSExpression getTextLetterSpacing();
     @Property(selector = "setTextLetterSpacing:")
-    public native void setTextLetterSpacing(MGLStyleValue<NSNumber> v);
+    public native void setTextLetterSpacing(NSExpression v);
     @Property(selector = "textLineHeight")
-    public native MGLStyleValue<NSNumber> getTextLineHeight();
+    public native NSExpression getTextLineHeight();
     @Property(selector = "setTextLineHeight:")
-    public native void setTextLineHeight(MGLStyleValue<NSNumber> v);
+    public native void setTextLineHeight(NSExpression v);
     @Property(selector = "textOffset")
-    public native MGLStyleValue<NSValue> getTextOffset();
+    public native NSExpression getTextOffset();
     @Property(selector = "setTextOffset:")
-    public native void setTextOffset(MGLStyleValue<NSValue> v);
+    public native void setTextOffset(NSExpression v);
     @Property(selector = "isTextOptional")
-    public native MGLStyleValue<NSNumber> getTextOptional();
+    public native NSExpression getTextOptional();
     @Property(selector = "setTextOptional:")
-    public native void setTextOptional(MGLStyleValue<NSNumber> v);
+    public native void setTextOptional(NSExpression v);
     @Property(selector = "textPadding")
-    public native MGLStyleValue<NSNumber> getTextPadding();
+    public native NSExpression getTextPadding();
     @Property(selector = "setTextPadding:")
-    public native void setTextPadding(MGLStyleValue<NSNumber> v);
+    public native void setTextPadding(NSExpression v);
     @Property(selector = "textPitchAlignment")
-    public native MGLStyleValue<NSValue> getTextPitchAlignment();
+    public native NSExpression getTextPitchAlignment();
     @Property(selector = "setTextPitchAlignment:")
-    public native void setTextPitchAlignment(MGLStyleValue<NSValue> v);
+    public native void setTextPitchAlignment(NSExpression v);
     @Property(selector = "textRotation")
-    public native MGLStyleValue<NSNumber> getTextRotation();
+    public native NSExpression getTextRotation();
     @Property(selector = "setTextRotation:")
-    public native void setTextRotation(MGLStyleValue<NSNumber> v);
+    public native void setTextRotation(NSExpression v);
     @Property(selector = "textRotationAlignment")
-    public native MGLStyleValue<NSValue> getTextRotationAlignment();
+    public native NSExpression getTextRotationAlignment();
     @Property(selector = "setTextRotationAlignment:")
-    public native void setTextRotationAlignment(MGLStyleValue<NSValue> v);
+    public native void setTextRotationAlignment(NSExpression v);
     @Property(selector = "textTransform")
-    public native MGLStyleValue<NSValue> getTextTransform();
+    public native NSExpression getTextTransform();
     @Property(selector = "setTextTransform:")
-    public native void setTextTransform(MGLStyleValue<NSValue> v);
+    public native void setTextTransform(NSExpression v);
     @Property(selector = "iconColor")
-    public native MGLStyleValue<UIColor> getIconColor();
+    public native NSExpression getIconColor();
     @Property(selector = "setIconColor:")
-    public native void setIconColor(MGLStyleValue<UIColor> v);
+    public native void setIconColor(NSExpression v);
     @Property(selector = "iconColorTransition")
     public native @ByVal MGLTransition getIconColorTransition();
     @Property(selector = "setIconColorTransition:")
     public native void setIconColorTransition(@ByVal MGLTransition v);
     @Property(selector = "iconHaloBlur")
-    public native MGLStyleValue<NSNumber> getIconHaloBlur();
+    public native NSExpression getIconHaloBlur();
     @Property(selector = "setIconHaloBlur:")
-    public native void setIconHaloBlur(MGLStyleValue<NSNumber> v);
+    public native void setIconHaloBlur(NSExpression v);
     @Property(selector = "iconHaloBlurTransition")
     public native @ByVal MGLTransition getIconHaloBlurTransition();
     @Property(selector = "setIconHaloBlurTransition:")
     public native void setIconHaloBlurTransition(@ByVal MGLTransition v);
     @Property(selector = "iconHaloColor")
-    public native MGLStyleValue<UIColor> getIconHaloColor();
+    public native NSExpression getIconHaloColor();
     @Property(selector = "setIconHaloColor:")
-    public native void setIconHaloColor(MGLStyleValue<UIColor> v);
+    public native void setIconHaloColor(NSExpression v);
     @Property(selector = "iconHaloColorTransition")
     public native @ByVal MGLTransition getIconHaloColorTransition();
     @Property(selector = "setIconHaloColorTransition:")
     public native void setIconHaloColorTransition(@ByVal MGLTransition v);
     @Property(selector = "iconHaloWidth")
-    public native MGLStyleValue<NSNumber> getIconHaloWidth();
+    public native NSExpression getIconHaloWidth();
     @Property(selector = "setIconHaloWidth:")
-    public native void setIconHaloWidth(MGLStyleValue<NSNumber> v);
+    public native void setIconHaloWidth(NSExpression v);
     @Property(selector = "iconHaloWidthTransition")
     public native @ByVal MGLTransition getIconHaloWidthTransition();
     @Property(selector = "setIconHaloWidthTransition:")
     public native void setIconHaloWidthTransition(@ByVal MGLTransition v);
     @Property(selector = "iconOpacity")
-    public native MGLStyleValue<NSNumber> getIconOpacity();
+    public native NSExpression getIconOpacity();
     @Property(selector = "setIconOpacity:")
-    public native void setIconOpacity(MGLStyleValue<NSNumber> v);
+    public native void setIconOpacity(NSExpression v);
     @Property(selector = "iconOpacityTransition")
     public native @ByVal MGLTransition getIconOpacityTransition();
     @Property(selector = "setIconOpacityTransition:")
     public native void setIconOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "iconTranslation")
-    public native MGLStyleValue<NSValue> getIconTranslation();
+    public native NSExpression getIconTranslation();
     @Property(selector = "setIconTranslation:")
-    public native void setIconTranslation(MGLStyleValue<NSValue> v);
+    public native void setIconTranslation(NSExpression v);
     @Property(selector = "iconTranslationTransition")
     public native @ByVal MGLTransition getIconTranslationTransition();
     @Property(selector = "setIconTranslationTransition:")
     public native void setIconTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "iconTranslationAnchor")
-    public native MGLStyleValue<NSValue> getIconTranslationAnchor();
+    public native NSExpression getIconTranslationAnchor();
     @Property(selector = "setIconTranslationAnchor:")
-    public native void setIconTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setIconTranslationAnchor(NSExpression v);
     @Property(selector = "textColor")
-    public native MGLStyleValue<UIColor> getTextColor();
+    public native NSExpression getTextColor();
     @Property(selector = "setTextColor:")
-    public native void setTextColor(MGLStyleValue<UIColor> v);
+    public native void setTextColor(NSExpression v);
     @Property(selector = "textColorTransition")
     public native @ByVal MGLTransition getTextColorTransition();
     @Property(selector = "setTextColorTransition:")
     public native void setTextColorTransition(@ByVal MGLTransition v);
     @Property(selector = "textHaloBlur")
-    public native MGLStyleValue<NSNumber> getTextHaloBlur();
+    public native NSExpression getTextHaloBlur();
     @Property(selector = "setTextHaloBlur:")
-    public native void setTextHaloBlur(MGLStyleValue<NSNumber> v);
+    public native void setTextHaloBlur(NSExpression v);
     @Property(selector = "textHaloBlurTransition")
     public native @ByVal MGLTransition getTextHaloBlurTransition();
     @Property(selector = "setTextHaloBlurTransition:")
     public native void setTextHaloBlurTransition(@ByVal MGLTransition v);
     @Property(selector = "textHaloColor")
-    public native MGLStyleValue<UIColor> getTextHaloColor();
+    public native NSExpression getTextHaloColor();
     @Property(selector = "setTextHaloColor:")
-    public native void setTextHaloColor(MGLStyleValue<UIColor> v);
+    public native void setTextHaloColor(NSExpression v);
     @Property(selector = "textHaloColorTransition")
     public native @ByVal MGLTransition getTextHaloColorTransition();
     @Property(selector = "setTextHaloColorTransition:")
     public native void setTextHaloColorTransition(@ByVal MGLTransition v);
     @Property(selector = "textHaloWidth")
-    public native MGLStyleValue<NSNumber> getTextHaloWidth();
+    public native NSExpression getTextHaloWidth();
     @Property(selector = "setTextHaloWidth:")
-    public native void setTextHaloWidth(MGLStyleValue<NSNumber> v);
+    public native void setTextHaloWidth(NSExpression v);
     @Property(selector = "textHaloWidthTransition")
     public native @ByVal MGLTransition getTextHaloWidthTransition();
     @Property(selector = "setTextHaloWidthTransition:")
     public native void setTextHaloWidthTransition(@ByVal MGLTransition v);
     @Property(selector = "textOpacity")
-    public native MGLStyleValue<NSNumber> getTextOpacity();
+    public native NSExpression getTextOpacity();
     @Property(selector = "setTextOpacity:")
-    public native void setTextOpacity(MGLStyleValue<NSNumber> v);
+    public native void setTextOpacity(NSExpression v);
     @Property(selector = "textOpacityTransition")
     public native @ByVal MGLTransition getTextOpacityTransition();
     @Property(selector = "setTextOpacityTransition:")
     public native void setTextOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "textTranslation")
-    public native MGLStyleValue<NSValue> getTextTranslation();
+    public native NSExpression getTextTranslation();
     @Property(selector = "setTextTranslation:")
-    public native void setTextTranslation(MGLStyleValue<NSValue> v);
+    public native void setTextTranslation(NSExpression v);
     @Property(selector = "textTranslationTransition")
     public native @ByVal MGLTransition getTextTranslationTransition();
     @Property(selector = "setTextTranslationTransition:")
     public native void setTextTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "textTranslationAnchor")
-    public native MGLStyleValue<NSValue> getTextTranslationAnchor();
+    public native NSExpression getTextTranslationAnchor();
     @Property(selector = "setTextTranslationAnchor:")
-    public native void setTextTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setTextTranslationAnchor(NSExpression v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

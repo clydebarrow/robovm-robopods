@@ -55,93 +55,93 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "lineCap")
-    public native MGLStyleValue<NSValue> getLineCap();
+    public native NSExpression getLineCap();
     @Property(selector = "setLineCap:")
-    public native void setLineCap(MGLStyleValue<NSValue> v);
+    public native void setLineCap(NSExpression v);
     @Property(selector = "lineJoin")
-    public native MGLStyleValue<NSValue> getLineJoin();
+    public native NSExpression getLineJoin();
     @Property(selector = "setLineJoin:")
-    public native void setLineJoin(MGLStyleValue<NSValue> v);
+    public native void setLineJoin(NSExpression v);
     @Property(selector = "lineMiterLimit")
-    public native MGLStyleValue<NSNumber> getLineMiterLimit();
+    public native NSExpression getLineMiterLimit();
     @Property(selector = "setLineMiterLimit:")
-    public native void setLineMiterLimit(MGLStyleValue<NSNumber> v);
+    public native void setLineMiterLimit(NSExpression v);
     @Property(selector = "lineRoundLimit")
-    public native MGLStyleValue<NSNumber> getLineRoundLimit();
+    public native NSExpression getLineRoundLimit();
     @Property(selector = "setLineRoundLimit:")
-    public native void setLineRoundLimit(MGLStyleValue<NSNumber> v);
+    public native void setLineRoundLimit(NSExpression v);
     @Property(selector = "lineBlur")
-    public native MGLStyleValue<NSNumber> getLineBlur();
+    public native NSExpression getLineBlur();
     @Property(selector = "setLineBlur:")
-    public native void setLineBlur(MGLStyleValue<NSNumber> v);
+    public native void setLineBlur(NSExpression v);
     @Property(selector = "lineBlurTransition")
     public native @ByVal MGLTransition getLineBlurTransition();
     @Property(selector = "setLineBlurTransition:")
     public native void setLineBlurTransition(@ByVal MGLTransition v);
     @Property(selector = "lineColor")
-    public native MGLStyleValue<UIColor> getLineColor();
+    public native NSExpression getLineColor();
     @Property(selector = "setLineColor:")
-    public native void setLineColor(MGLStyleValue<UIColor> v);
+    public native void setLineColor(NSExpression v);
     @Property(selector = "lineColorTransition")
     public native @ByVal MGLTransition getLineColorTransition();
     @Property(selector = "setLineColorTransition:")
     public native void setLineColorTransition(@ByVal MGLTransition v);
     @Property(selector = "lineDashPattern")
-    public native MGLStyleValue getLineDashPattern();
+    public native NSExpression getLineDashPattern();
     @Property(selector = "setLineDashPattern:")
-    public native void setLineDashPattern(MGLStyleValue v);
+    public native void setLineDashPattern(NSExpression v);
     @Property(selector = "lineDashPatternTransition")
     public native @ByVal MGLTransition getLineDashPatternTransition();
     @Property(selector = "setLineDashPatternTransition:")
     public native void setLineDashPatternTransition(@ByVal MGLTransition v);
     @Property(selector = "lineGapWidth")
-    public native MGLStyleValue<NSNumber> getLineGapWidth();
+    public native NSExpression getLineGapWidth();
     @Property(selector = "setLineGapWidth:")
-    public native void setLineGapWidth(MGLStyleValue<NSNumber> v);
+    public native void setLineGapWidth(NSExpression v);
     @Property(selector = "lineGapWidthTransition")
     public native @ByVal MGLTransition getLineGapWidthTransition();
     @Property(selector = "setLineGapWidthTransition:")
     public native void setLineGapWidthTransition(@ByVal MGLTransition v);
     @Property(selector = "lineOffset")
-    public native MGLStyleValue<NSNumber> getLineOffset();
+    public native NSExpression getLineOffset();
     @Property(selector = "setLineOffset:")
-    public native void setLineOffset(MGLStyleValue<NSNumber> v);
+    public native void setLineOffset(NSExpression v);
     @Property(selector = "lineOffsetTransition")
     public native @ByVal MGLTransition getLineOffsetTransition();
     @Property(selector = "setLineOffsetTransition:")
     public native void setLineOffsetTransition(@ByVal MGLTransition v);
     @Property(selector = "lineOpacity")
-    public native MGLStyleValue<NSNumber> getLineOpacity();
+    public native NSExpression getLineOpacity();
     @Property(selector = "setLineOpacity:")
-    public native void setLineOpacity(MGLStyleValue<NSNumber> v);
+    public native void setLineOpacity(NSExpression v);
     @Property(selector = "lineOpacityTransition")
     public native @ByVal MGLTransition getLineOpacityTransition();
     @Property(selector = "setLineOpacityTransition:")
     public native void setLineOpacityTransition(@ByVal MGLTransition v);
     @Property(selector = "linePattern")
-    public native MGLStyleValue<NSString> getLinePattern();
+    public native NSExpression getLinePattern();
     @Property(selector = "setLinePattern:")
-    public native void setLinePattern(MGLStyleValue<NSString> v);
+    public native void setLinePattern(NSExpression v);
     @Property(selector = "linePatternTransition")
     public native @ByVal MGLTransition getLinePatternTransition();
     @Property(selector = "setLinePatternTransition:")
     public native void setLinePatternTransition(@ByVal MGLTransition v);
     @Property(selector = "lineTranslation")
-    public native MGLStyleValue<NSValue> getLineTranslation();
+    public native NSExpression getLineTranslation();
     @Property(selector = "setLineTranslation:")
-    public native void setLineTranslation(MGLStyleValue<NSValue> v);
+    public native void setLineTranslation(NSExpression v);
     @Property(selector = "lineTranslationTransition")
     public native @ByVal MGLTransition getLineTranslationTransition();
     @Property(selector = "setLineTranslationTransition:")
     public native void setLineTranslationTransition(@ByVal MGLTransition v);
     @Property(selector = "lineTranslationAnchor")
-    public native MGLStyleValue<NSValue> getLineTranslationAnchor();
+    public native NSExpression getLineTranslationAnchor();
     @Property(selector = "setLineTranslationAnchor:")
-    public native void setLineTranslationAnchor(MGLStyleValue<NSValue> v);
+    public native void setLineTranslationAnchor(NSExpression v);
     @Property(selector = "lineWidth")
-    public native MGLStyleValue<NSNumber> getLineWidth();
+    public native NSExpression getLineWidth();
     @Property(selector = "setLineWidth:")
-    public native void setLineWidth(MGLStyleValue<NSNumber> v);
+    public native void setLineWidth(NSExpression v);
     @Property(selector = "lineWidthTransition")
     public native @ByVal MGLTransition getLineWidthTransition();
     @Property(selector = "setLineWidthTransition:")

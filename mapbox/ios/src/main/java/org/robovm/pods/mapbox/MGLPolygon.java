@@ -62,10 +62,21 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "polygonWithCoordinates:count:")
-    public static native MGLPolygon polygon(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected static native MGLPolygon nativePolygon(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "polygonWithCoordinates:count:interiorPolygons:")
-    public static native MGLPolygon polygon(CLLocationCoordinate2D coords, @MachineSizedUInt long count, NSArray<MGLPolygon> interiorPolygons);
+    protected static native MGLPolygon nativePolygon(CLLocationCoordinate2D coords, @MachineSizedUInt long count, NSArray<MGLPolygon> interiorPolygons);
     @Method(selector = "intersectsOverlayBounds:")
     public native boolean intersectsOverlayBounds(@ByVal MGLCoordinateBounds overlayBounds);
     /*</methods>*/
+
+    public static MGLPolygon polygon(CLLocationCoordinate2D[] coords) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        return nativePolygon(value, coords.length);
+    }
+    public static MGLPolygon polygon(CLLocationCoordinate2D[] coords, NSArray<MGLPolygon> interiorPolygons) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        return nativePolygon(value, coords.length, interiorPolygons);
+    }
 }

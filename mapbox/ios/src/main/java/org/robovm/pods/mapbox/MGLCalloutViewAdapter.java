@@ -72,9 +72,11 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @NotImplemented("presentCalloutFromRect:inView:constrainedToView:animated:")
-    public void presentCallout(@ByVal CGRect rect, UIView view, UIView constrainedView, boolean animated) {}
+    @NotImplemented("presentCalloutFromRect:inView:constrainedToRect:animated:")
+    public void presentCalloutFrom(@ByVal CGRect rect, UIView view, @ByVal CGRect constrainedRect, boolean animated) {}
     @NotImplemented("dismissCalloutAnimated:")
     public void dismissCalloutAnimated(boolean animated) {}
+    @NotImplemented("marginInsetsHintForPresentationFromRect:")
+    public @ByVal UIEdgeInsets marginInsetsHintForPresentationFromRect(@ByVal CGRect rect) { return null; }
     /*</methods>*/
 }

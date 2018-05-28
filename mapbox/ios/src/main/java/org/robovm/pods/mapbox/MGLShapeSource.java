@@ -75,12 +75,18 @@ import org.robovm.apple.coreanimation.*;
     public static native Option ClusterRadius();
     @GlobalValue(symbol="MGLShapeSourceOptionMaximumZoomLevelForClustering", optional=true)
     public static native Option MaximumZoomLevelForClustering();
+    @GlobalValue(symbol="MGLShapeSourceOptionMinimumZoomLevel", optional=true)
+    public static native Option MinimumZoomLevel();
     @GlobalValue(symbol="MGLShapeSourceOptionMaximumZoomLevel", optional=true)
     public static native Option MaximumZoomLevel();
     @GlobalValue(symbol="MGLShapeSourceOptionBuffer", optional=true)
     public static native Option Buffer();
     @GlobalValue(symbol="MGLShapeSourceOptionSimplificationTolerance", optional=true)
     public static native Option SimplificationTolerance();
+    @GlobalValue(symbol="MGLShapeSourceOptionWrapsCoordinates", optional=true)
+    public static native Option WrapsCoordinates();
+    @GlobalValue(symbol="MGLShapeSourceOptionClipsCoordinates", optional=true)
+    public static native Option ClipsCoordinates();
     
     @Method(selector = "initWithIdentifier:URL:options:")
     protected native @Pointer long init(String identifier, NSURL url, NSDictionary<MGLShapeSource.Option, ?> options);

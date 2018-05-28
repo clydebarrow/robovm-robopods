@@ -30,6 +30,9 @@ import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
 import org.robovm.apple.uikit.*;
 import org.robovm.apple.dispatch.*;
+import org.robovm.apple.corelocation.*;
+import org.robovm.apple.coregraphics.*;
+import org.robovm.apple.coreanimation.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -47,13 +50,11 @@ import org.robovm.apple.dispatch.*;
     /*<properties>*//*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="MGLOfflinePackStateUserInfoKey", optional=true)
-    public static native String MGLOfflinePackStateUserInfoKey();
-    @GlobalValue(symbol="MGLOfflinePackProgressUserInfoKey", optional=true)
-    public static native String MGLOfflinePackProgressUserInfoKey();
-    @GlobalValue(symbol="MGLOfflinePackErrorUserInfoKey", optional=true)
-    public static native String MGLOfflinePackErrorUserInfoKey();
-    @GlobalValue(symbol="MGLOfflinePackMaximumCountUserInfoKey", optional=true)
-    public static native String MGLOfflinePackMaximumCountUserInfoKey();
+    @GlobalValue(symbol="MGLExpressionInterpolationModeLinear", optional=true)
+    public static native String MGLExpressionInterpolationModeLinear();
+    @GlobalValue(symbol="MGLExpressionInterpolationModeExponential", optional=true)
+    public static native String MGLExpressionInterpolationModeExponential();
+    @GlobalValue(symbol="MGLExpressionInterpolationModeCubicBezier", optional=true)
+    public static native String MGLExpressionInterpolationModeCubicBezier();
     /*</methods>*/
 }

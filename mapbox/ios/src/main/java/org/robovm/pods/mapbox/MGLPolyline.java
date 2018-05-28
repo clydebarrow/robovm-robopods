@@ -60,8 +60,14 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "polylineWithCoordinates:count:")
-    public static native MGLPolyline polyline(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    protected static native MGLPolyline nativePolyline(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Method(selector = "intersectsOverlayBounds:")
     public native boolean intersectsOverlayBounds(@ByVal MGLCoordinateBounds overlayBounds);
     /*</methods>*/
+
+    public static MGLPolyline polyLine(CLLocationCoordinate2D[] coords) {
+        CLLocationCoordinate2D value = Struct.allocate(CLLocationCoordinate2D.class, coords.length);
+        value.update(coords);
+        return nativePolyline(value, coords.length);
+    }
 }

@@ -52,6 +52,8 @@ import org.robovm.apple.coreanimation.*;
     protected MGLOfflineStorage(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "sharedOfflineStorage")
+    public static native MGLOfflineStorage getSharedOfflineStorage();
     @Property(selector = "delegate")
     public native MGLOfflineStorageDelegate getDelegate();
     @Property(selector = "setDelegate:", strongRef = true)
@@ -80,7 +82,5 @@ import org.robovm.apple.coreanimation.*;
     public native void reloadPacks();
     @Method(selector = "setMaximumAllowedMapboxTiles:")
     public native void setMaximumAllowedMapboxTiles(long maximumCount);
-    @Method(selector = "sharedOfflineStorage")
-    public static native MGLOfflineStorage sharedOfflineStorage();
     /*</methods>*/
 }

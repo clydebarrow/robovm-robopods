@@ -53,29 +53,29 @@ import org.robovm.apple.coreanimation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "anchor")
-    public native MGLStyleValue<NSValue> getAnchor();
+    public native NSExpression getAnchor();
     @Property(selector = "setAnchor:")
-    public native void setAnchor(MGLStyleValue<NSValue> v);
+    public native void setAnchor(NSExpression v);
     @Property(selector = "position")
-    public native MGLStyleValue<NSValue> getPosition();
+    public native NSExpression getPosition();
     @Property(selector = "setPosition:")
-    public native void setPosition(MGLStyleValue<NSValue> v);
+    public native void setPosition(NSExpression v);
     @Property(selector = "positionTransition")
     public native @ByVal MGLTransition getPositionTransition();
     @Property(selector = "setPositionTransition:")
     public native void setPositionTransition(@ByVal MGLTransition v);
     @Property(selector = "color")
-    public native MGLStyleValue<UIColor> getColor();
+    public native NSExpression getColor();
     @Property(selector = "setColor:")
-    public native void setColor(MGLStyleValue<UIColor> v);
+    public native void setColor(NSExpression v);
     @Property(selector = "colorTransition")
     public native @ByVal MGLTransition getColorTransition();
     @Property(selector = "setColorTransition:")
     public native void setColorTransition(@ByVal MGLTransition v);
     @Property(selector = "intensity")
-    public native MGLStyleValue<NSNumber> getIntensity();
+    public native NSExpression getIntensity();
     @Property(selector = "setIntensity:")
-    public native void setIntensity(MGLStyleValue<NSNumber> v);
+    public native void setIntensity(NSExpression v);
     @Property(selector = "intensityTransition")
     public native @ByVal MGLTransition getIntensityTransition();
     @Property(selector = "setIntensityTransition:")
