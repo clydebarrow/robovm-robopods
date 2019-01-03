@@ -42,7 +42,6 @@ public final class /*<name>*/AppodealAdType/*</name>*/ extends Bits</*<name>*/Ap
     /*<values>*/
     public static final AppodealAdType None = new AppodealAdType(0L);
     public static final AppodealAdType Interstitial = new AppodealAdType(1L);
-    public static final AppodealAdType SkippableVideo = new AppodealAdType(2L);
     public static final AppodealAdType Banner = new AppodealAdType(4L);
     public static final AppodealAdType NativeAd = new AppodealAdType(8L);
     public static final AppodealAdType RewardedVideo = new AppodealAdType(16L);
