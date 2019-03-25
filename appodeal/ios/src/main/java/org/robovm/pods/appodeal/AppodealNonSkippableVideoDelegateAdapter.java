@@ -54,17 +54,23 @@ import org.robovm.apple.storekit.*;
     /*<methods>*/
     @NotImplemented("nonSkippableVideoDidLoadAd")
     public void nonSkippableVideoDidLoadAd() {}
+    @NotImplemented("nonSkippableVideoDidLoadAdIsPrecache:")
+    public void nonSkippableVideoDidLoadAdIsPrecache(boolean precache) {}
     @NotImplemented("nonSkippableVideoDidFailToLoadAd")
     public void nonSkippableVideoDidFailToLoadAd() {}
+    @NotImplemented("nonSkippableVideoDidExpired")
+    public void nonSkippableVideoDidExpired() {}
     @NotImplemented("nonSkippableVideoDidPresent")
     public void nonSkippableVideoDidPresent() {}
     @NotImplemented("nonSkippableVideoDidFailToPresent")
     public void nonSkippableVideoDidFailToPresent() {}
+    @NotImplemented("nonSkippableVideoDidFailToPresentWithError:")
+    public void nonSkippableVideoDidFailToPresentWithError(NSError error) {}
     @NotImplemented("nonSkippableVideoWillDismiss")
     public void nonSkippableVideoWillDismiss() {}
+    @NotImplemented("nonSkippableVideoWillDismissAndWasFullyWatched:")
+    public void nonSkippableVideoWillDismissAndWasFullyWatched(boolean wasFullyWatched) {}
     @NotImplemented("nonSkippableVideoDidFinish")
     public void nonSkippableVideoDidFinish() {}
-    @NotImplemented("nonSkippableVideoDidClick")
-    public void nonSkippableVideoDidClick() {}
     /*</methods>*/
 }

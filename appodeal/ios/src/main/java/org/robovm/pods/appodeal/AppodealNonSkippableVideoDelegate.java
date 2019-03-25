@@ -52,18 +52,24 @@ import org.robovm.apple.storekit.*;
     /*<methods>*/
     @Method(selector = "nonSkippableVideoDidLoadAd")
     void nonSkippableVideoDidLoadAd();
+    @Method(selector = "nonSkippableVideoDidLoadAdIsPrecache:")
+    void nonSkippableVideoDidLoadAdIsPrecache(boolean precache);
     @Method(selector = "nonSkippableVideoDidFailToLoadAd")
     void nonSkippableVideoDidFailToLoadAd();
+    @Method(selector = "nonSkippableVideoDidExpired")
+    void nonSkippableVideoDidExpired();
     @Method(selector = "nonSkippableVideoDidPresent")
     void nonSkippableVideoDidPresent();
     @Method(selector = "nonSkippableVideoDidFailToPresent")
     void nonSkippableVideoDidFailToPresent();
+    @Method(selector = "nonSkippableVideoDidFailToPresentWithError:")
+    void nonSkippableVideoDidFailToPresentWithError(NSError error);
     @Method(selector = "nonSkippableVideoWillDismiss")
     void nonSkippableVideoWillDismiss();
+    @Method(selector = "nonSkippableVideoWillDismissAndWasFullyWatched:")
+    void nonSkippableVideoWillDismissAndWasFullyWatched(boolean wasFullyWatched);
     @Method(selector = "nonSkippableVideoDidFinish")
     void nonSkippableVideoDidFinish();
-    @Method(selector = "nonSkippableVideoDidClick")
-    void nonSkippableVideoDidClick();
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

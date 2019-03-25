@@ -189,7 +189,11 @@ MGL_EXPORT IB_DESIGNABLE
  */
 @property (nonatomic, readonly, nullable) MGLStyle *style;
 
+<<<<<<< HEAD
 @property (nonatomic, readonly) NS_ARRAY_OF(NSURL *) *bundledStyleURLs __attribute__((unavailable("Call the relevant class method of MGLStyle for the URL of a particular default style.")));
+=======
+@property (nonatomic, readonly) NSArray<NSURL *> *bundledStyleURLs __attribute__((unavailable("Call the relevant class method of MGLStyle for the URL of a particular default style.")));
+>>>>>>> upstream/master
 
 /**
  URL of the style currently displayed in the receiver.
@@ -286,7 +290,11 @@ MGL_EXPORT IB_DESIGNABLE
  */
 - (IBAction)showAttribution:(id)sender;
 
+<<<<<<< HEAD
 @property (nonatomic) NS_ARRAY_OF(NSString *) *styleClasses __attribute__((unavailable("Support for style classes has been removed.")));
+=======
+@property (nonatomic) NSArray<NSString *> *styleClasses __attribute__((unavailable("Support for style classes has been removed.")));
+>>>>>>> upstream/master
 
 - (BOOL)hasStyleClass:(NSString *)styleClass __attribute__((unavailable("Support for style classes has been removed.")));
 
@@ -773,7 +781,11 @@ MGL_EXPORT IB_DESIGNABLE
  @param animated `YES` if you want the map region change to be animated, or `NO`
     if you want the map to display the new region immediately without animations.
  */
+<<<<<<< HEAD
 - (void)showAnnotations:(NS_ARRAY_OF(id <MGLAnnotation>) *)annotations animated:(BOOL)animated;
+=======
+- (void)showAnnotations:(NSArray<id <MGLAnnotation>> *)annotations animated:(BOOL)animated;
+>>>>>>> upstream/master
 
 /**
  Sets the visible region so that the map displays the specified annotations with
@@ -788,7 +800,11 @@ MGL_EXPORT IB_DESIGNABLE
  @param animated `YES` if you want the map region change to be animated, or `NO`
     if you want the map to display the new region immediately without animations.
  */
+<<<<<<< HEAD
 - (void)showAnnotations:(NS_ARRAY_OF(id <MGLAnnotation>) *)annotations edgePadding:(UIEdgeInsets)insets animated:(BOOL)animated;
+=======
+- (void)showAnnotations:(NSArray<id <MGLAnnotation>> *)annotations edgePadding:(UIEdgeInsets)insets animated:(BOOL)animated;
+>>>>>>> upstream/master
 
 /**
  A camera representing the current viewpoint of the map.
@@ -1076,7 +1092,11 @@ MGL_EXPORT IB_DESIGNABLE
  annotations are associated with the map view, the value of this property is
  `nil`.
  */
+<<<<<<< HEAD
 @property (nonatomic, readonly, nullable) NS_ARRAY_OF(id <MGLAnnotation>) *annotations;
+=======
+@property (nonatomic, readonly, nullable) NSArray<id <MGLAnnotation>> *annotations;
+>>>>>>> upstream/master
 
 /**
  Adds an annotation to the map view.
@@ -1104,7 +1124,11 @@ MGL_EXPORT IB_DESIGNABLE
     must conform to the `MGLAnnotation` protocol. The map view retains each
     individual annotation object.
  */
+<<<<<<< HEAD
 - (void)addAnnotations:(NS_ARRAY_OF(id <MGLAnnotation>) *)annotations;
+=======
+- (void)addAnnotations:(NSArray<id <MGLAnnotation>> *)annotations;
+>>>>>>> upstream/master
 
 /**
  Removes an annotation from the map view, deselecting it if it is selected.
@@ -1129,7 +1153,11 @@ MGL_EXPORT IB_DESIGNABLE
  @param annotations The array of annotation objects to remove. Objects in the
     array must conform to the `MGLAnnotation` protocol.
  */
+<<<<<<< HEAD
 - (void)removeAnnotations:(NS_ARRAY_OF(id <MGLAnnotation>) *)annotations;
+=======
+- (void)removeAnnotations:(NSArray<id <MGLAnnotation>> *)annotations;
+>>>>>>> upstream/master
 
 /**
  Returns an `MGLAnnotationView` if the given annotation is currently associated
@@ -1180,7 +1208,11 @@ MGL_EXPORT IB_DESIGNABLE
  annotations are associated with the map view or if no annotations associated
  with the map view are currently visible, the value of this property is `nil`.
  */
+<<<<<<< HEAD
 @property (nonatomic, readonly, nullable) NS_ARRAY_OF(id <MGLAnnotation>) *visibleAnnotations;
+=======
+@property (nonatomic, readonly, nullable) NSArray<id <MGLAnnotation>> *visibleAnnotations;
+>>>>>>> upstream/master
 
 /**
  Returns the list of annotations associated with the receiver that intersect with
@@ -1191,7 +1223,11 @@ MGL_EXPORT IB_DESIGNABLE
     no annotations associated with the map view are currently visible in the
     rectangle.
  */
+<<<<<<< HEAD
 - (nullable NS_ARRAY_OF(id <MGLAnnotation>) *)visibleAnnotationsInRect:(CGRect)rect;
+=======
+- (nullable NSArray<id <MGLAnnotation>> *)visibleAnnotationsInRect:(CGRect)rect;
+>>>>>>> upstream/master
 
 #pragma mark Managing Annotation Selections
 
@@ -1208,7 +1244,11 @@ MGL_EXPORT IB_DESIGNABLE
  @note In versions prior to `4.0.0` if the annotation was offscreen it was not
  selected.
  */
+<<<<<<< HEAD
 @property (nonatomic, copy) NS_ARRAY_OF(id <MGLAnnotation>) *selectedAnnotations;
+=======
+@property (nonatomic, copy) NSArray<id <MGLAnnotation>> *selectedAnnotations;
+>>>>>>> upstream/master
 
 /**
  Selects an annotation and displays its callout view.
@@ -1246,7 +1286,11 @@ MGL_EXPORT IB_DESIGNABLE
  overlays are associated with the map view, the value of this property is
  empty array.
  */
+<<<<<<< HEAD
 @property (nonatomic, readonly, nonnull) NS_ARRAY_OF(id <MGLOverlay>) *overlays;
+=======
+@property (nonatomic, readonly, nonnull) NSArray<id <MGLOverlay>> *overlays;
+>>>>>>> upstream/master
 
 /**
  Adds a single overlay object to the map.
@@ -1265,7 +1309,11 @@ MGL_EXPORT IB_DESIGNABLE
  @param overlays An array of objects, each of which must conform to the
     `MGLOverlay` protocol.
  */
+<<<<<<< HEAD
 - (void)addOverlays:(NS_ARRAY_OF(id <MGLOverlay>) *)overlays;
+=======
+- (void)addOverlays:(NSArray<id <MGLOverlay>> *)overlays;
+>>>>>>> upstream/master
 
 /**
  Removes a single overlay object from the map.
@@ -1285,7 +1333,11 @@ MGL_EXPORT IB_DESIGNABLE
  @param overlays An array of objects, each of which conforms to the `MGLOverlay`
     protocol.
  */
+<<<<<<< HEAD
 - (void)removeOverlays:(NS_ARRAY_OF(id <MGLOverlay>) *)overlays;
+=======
+- (void)removeOverlays:(NSArray<id <MGLOverlay>> *)overlays;
+>>>>>>> upstream/master
 
 #pragma mark Accessing the Underlying Map Data
 
@@ -1301,7 +1353,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesAtPoint:(CGPoint)point NS_SWIFT_NAME(visibleFeatures(at:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesAtPoint:(CGPoint)point NS_SWIFT_NAME(visibleFeatures(at:));
+>>>>>>> upstream/master
 
 /**
  Returns an array of rendered map features that intersect with a given point,
@@ -1320,7 +1376,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that 
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesAtPoint:(CGPoint)point inStyleLayersWithIdentifiers:(nullable NS_SET_OF(NSString *) *)styleLayerIdentifiers NS_SWIFT_NAME(visibleFeatures(at:styleLayerIdentifiers:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesAtPoint:(CGPoint)point inStyleLayersWithIdentifiers:(nullable NSSet<NSString *> *)styleLayerIdentifiers NS_SWIFT_NAME(visibleFeatures(at:styleLayerIdentifiers:));
+>>>>>>> upstream/master
 
 /**
  Returns an array of rendered map features that intersect with a given point,
@@ -1387,7 +1447,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesAtPoint:(CGPoint)point inStyleLayersWithIdentifiers:(nullable NS_SET_OF(NSString *) *)styleLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(visibleFeatures(at:styleLayerIdentifiers:predicate:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesAtPoint:(CGPoint)point inStyleLayersWithIdentifiers:(nullable NSSet<NSString *> *)styleLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(visibleFeatures(at:styleLayerIdentifiers:predicate:));
+>>>>>>> upstream/master
 
 /**
  Returns an array of rendered map features that intersect with the given
@@ -1402,7 +1466,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesInRect:(CGRect)rect NS_SWIFT_NAME(visibleFeatures(in:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesInRect:(CGRect)rect NS_SWIFT_NAME(visibleFeatures(in:));
+>>>>>>> upstream/master
 
 /**
  Returns an array of rendered map features that intersect with the given
@@ -1421,7 +1489,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesInRect:(CGRect)rect inStyleLayersWithIdentifiers:(nullable NS_SET_OF(NSString *) *)styleLayerIdentifiers NS_SWIFT_NAME(visibleFeatures(in:styleLayerIdentifiers:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesInRect:(CGRect)rect inStyleLayersWithIdentifiers:(nullable NSSet<NSString *> *)styleLayerIdentifiers NS_SWIFT_NAME(visibleFeatures(in:styleLayerIdentifiers:));
+>>>>>>> upstream/master
 
 /**
  Returns an array of rendered map features that intersect with the given
@@ -1493,7 +1565,11 @@ MGL_EXPORT IB_DESIGNABLE
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features in the sources used by the current style.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)visibleFeaturesInRect:(CGRect)rect inStyleLayersWithIdentifiers:(nullable NS_SET_OF(NSString *) *)styleLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(visibleFeatures(in:styleLayerIdentifiers:predicate:));
+=======
+- (NSArray<id <MGLFeature>> *)visibleFeaturesInRect:(CGRect)rect inStyleLayersWithIdentifiers:(nullable NSSet<NSString *> *)styleLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(visibleFeatures(in:styleLayerIdentifiers:predicate:));
+>>>>>>> upstream/master
 
 #pragma mark Debugging the Map
 

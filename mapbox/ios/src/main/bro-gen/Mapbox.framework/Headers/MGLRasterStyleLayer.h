@@ -64,7 +64,11 @@ MGL_EXPORT
  brightness.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  1. Set this property to `nil` to reset it to the default value.
+=======
+ `1`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-brightness-max"><code>raster-brightness-max</code></a>
@@ -97,7 +101,11 @@ MGL_EXPORT
  brightness.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-brightness-min"><code>raster-brightness-min</code></a>
@@ -129,7 +137,11 @@ MGL_EXPORT
  Increase or reduce the contrast of the image.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -157,7 +169,11 @@ MGL_EXPORT
  This property is measured in milliseconds.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  300. Set this property to `nil` to reset it to the default value.
+=======
+ `300`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -178,7 +194,11 @@ MGL_EXPORT
  This property is measured in degrees.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-hue-rotate"><code>raster-hue-rotate</code></a>
@@ -210,7 +230,11 @@ MGL_EXPORT
  The opacity at which the image will be drawn.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  1. Set this property to `nil` to reset it to the default value.
+=======
+ `1`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -236,7 +260,11 @@ MGL_EXPORT
  Increase or reduce the saturation of the image.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

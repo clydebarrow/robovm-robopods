@@ -117,7 +117,11 @@ MGL_EXPORT
  full opacity.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -186,7 +190,11 @@ MGL_EXPORT
  The opacity at which the circle will be drawn.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  1. Set this property to `nil` to reset it to the default value.
+=======
+ `1`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -235,7 +243,11 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  5. Set this property to `nil` to reset it to the default value.
+=======
+ `5`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -334,7 +346,11 @@ MGL_EXPORT
  The opacity of the circle's stroke.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  1. Set this property to `nil` to reset it to the default value.
+=======
+ `1`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -361,7 +377,11 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0. Set this property to `nil` to reset it to the default value.
+=======
+ `0`. Set this property to `nil` to reset it to the default value.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

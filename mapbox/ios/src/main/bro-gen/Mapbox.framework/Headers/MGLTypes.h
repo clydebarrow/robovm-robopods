@@ -111,6 +111,7 @@ NS_INLINE MGLTransition MGLTransitionMake(NSTimeInterval duration, NSTimeInterva
 }
 
 NS_ASSUME_NONNULL_END
+<<<<<<< HEAD
 
 #ifndef NS_ARRAY_OF
     // Foundation collection classes adopted lightweight generics in iOS 9.0 and OS X 10.11 SDKs.
@@ -131,3 +132,5 @@ NS_ASSUME_NONNULL_END
         #define NS_MUTABLE_DICTIONARY_OF(ObjectClass...)    NSMutableDictionary
     #endif
 #endif
+=======
+>>>>>>> upstream/master

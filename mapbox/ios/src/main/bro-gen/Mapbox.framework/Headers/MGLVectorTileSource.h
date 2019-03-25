@@ -99,7 +99,11 @@ MGL_EXPORT
     the default values.
  @return An initialized tile source.
  */
+<<<<<<< HEAD
 - (instancetype)initWithIdentifier:(NSString *)identifier tileURLTemplates:(NS_ARRAY_OF(NSString *) *)tileURLTemplates options:(nullable NS_DICTIONARY_OF(MGLTileSourceOption, id) *)options NS_DESIGNATED_INITIALIZER;
+=======
+- (instancetype)initWithIdentifier:(NSString *)identifier tileURLTemplates:(NSArray<NSString *> *)tileURLTemplates options:(nullable NSDictionary<MGLTileSourceOption, id> *)options NS_DESIGNATED_INITIALIZER;
+>>>>>>> upstream/master
 
 #pragma mark Accessing a Source’s Content
 
@@ -138,7 +142,11 @@ MGL_EXPORT
  @return An array of objects conforming to the `MGLFeature` protocol that
     represent features loaded by the source that match the predicate.
  */
+<<<<<<< HEAD
 - (NS_ARRAY_OF(id <MGLFeature>) *)featuresInSourceLayersWithIdentifiers:(NS_SET_OF(NSString *) *)sourceLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(features(sourceLayerIdentifiers:predicate:));
+=======
+- (NSArray<id <MGLFeature>> *)featuresInSourceLayersWithIdentifiers:(NSSet<NSString *> *)sourceLayerIdentifiers predicate:(nullable NSPredicate *)predicate NS_SWIFT_NAME(features(sourceLayerIdentifiers:predicate:));
+>>>>>>> upstream/master
 
 @end
 

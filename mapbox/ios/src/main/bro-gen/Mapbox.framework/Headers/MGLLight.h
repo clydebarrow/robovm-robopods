@@ -188,7 +188,11 @@ MGL_EXPORT
  more extreme contrast.
  
  The default value of this property is an expression that evaluates to the float
+<<<<<<< HEAD
  0.5.
+=======
+ `0.5`.
+>>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

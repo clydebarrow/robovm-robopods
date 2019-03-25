@@ -92,7 +92,11 @@ MGL_EXPORT
 /**
  An array of polygons forming the multipolyline.
  */
+<<<<<<< HEAD
 @property (nonatomic, copy, readonly) NS_ARRAY_OF(MGLPolyline *) *polylines;
+=======
+@property (nonatomic, copy, readonly) NSArray<MGLPolyline *> *polylines;
+>>>>>>> upstream/master
 
 /**
  Creates and returns a multipolyline object consisting of the given polylines.
@@ -100,7 +104,11 @@ MGL_EXPORT
  @param polylines The array of polylines defining the shape.
  @return A new multipolyline object.
  */
+<<<<<<< HEAD
 + (instancetype)multiPolylineWithPolylines:(NS_ARRAY_OF(MGLPolyline *) *)polylines;
+=======
++ (instancetype)multiPolylineWithPolylines:(NSArray<MGLPolyline *> *)polylines;
+>>>>>>> upstream/master
 
 @end
 

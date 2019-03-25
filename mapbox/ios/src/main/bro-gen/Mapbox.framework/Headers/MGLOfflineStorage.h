@@ -199,7 +199,11 @@ MGL_EXPORT
  `packs` property, observe KVO change notifications on the `packs` key path.
  The initial load results in an `NSKeyValueChangeSetting` change.
  */
+<<<<<<< HEAD
 @property (nonatomic, strong, readonly, nullable) NS_ARRAY_OF(MGLOfflinePack *) *packs;
+=======
+@property (nonatomic, strong, readonly, nullable) NSArray<MGLOfflinePack *> *packs;
+>>>>>>> upstream/master
 
 /**
  Creates and registers an offline pack that downloads the resources needed to
