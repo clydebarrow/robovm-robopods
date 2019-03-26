@@ -385,7 +385,7 @@ classes:
                 visibility: protected
 
     MGLPolylineFeature: {}
-    MGLRasterSource:
+    MGLRasterTileSource:
         methods:
             '-initWithIdentifier:configurationURL:':
                 name: init
@@ -673,7 +673,7 @@ classes:
     MGLTileSource: {}
     MGLUserLocation: {}
     MGLUserLocationAnnotationView: {}
-    MGLVectorSource:
+    MGLVectorTileSource:
         methods:
             '-initWithIdentifier:configurationURL:':
                 name: init
