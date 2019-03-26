@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, MGLHillshadeIlluminationAnchor) {
  Use a hillshade style layer to configure the color parameters of raster tiles
  loaded by an `MGLRasterDEMSource` object. For example, you could use a
  hillshade style layer to render <a
- href="https://www.mapbox.com/help/access-elevation-data/#mapbox-terrain-rgb">Mapbox
+ href="https://docs.mapbox.com/help/troubleshooting/access-elevation-data/#mapbox-terrain-rgb">Mapbox
  Terrain-RGB</a> data.
  
  To display posterized hillshading based on vector shapes, as with the <a
@@ -130,11 +130,7 @@ MGL_EXPORT
  Intensity of the hillshade
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0.5. Set this property to `nil` to reset it to the default value.
-=======
  `0.5`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -236,11 +232,7 @@ MGL_EXPORT
  `hillshadeIlluminationAnchor` is set to `MGLHillshadeIlluminationAnchorMap`.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 335. Set this property to `nil` to reset it to the default value.
-=======
  `335`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

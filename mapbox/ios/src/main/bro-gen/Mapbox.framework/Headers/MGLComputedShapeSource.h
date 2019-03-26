@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  This option is used with the `MGLComputedShapeSource` class; it is ignored when
  creating an `MGLShapeSource` object.
  */
-extern MGL_EXPORT const MGLShapeSourceOption MGLShapeSourceOptionWrapsCoordinates;
+FOUNDATION_EXTERN MGL_EXPORT const MGLShapeSourceOption MGLShapeSourceOptionWrapsCoordinates;
 
 /**
  An `NSNumber` object containing a Boolean value; specifies whether the shape of
@@ -30,7 +30,9 @@ extern MGL_EXPORT const MGLShapeSourceOption MGLShapeSourceOptionWrapsCoordinate
  This option is used with the `MGLComputedShapeSource` class; it is ignored when
  creating an `MGLShapeSource` object.
  */
-extern MGL_EXPORT const MGLShapeSourceOption MGLShapeSourceOptionClipsCoordinates;
+FOUNDATION_EXTERN MGL_EXPORT const MGLShapeSourceOption MGLShapeSourceOptionClipsCoordinates;
+
+FOUNDATION_EXTERN MGL_EXPORT MGLExceptionName const MGLInvalidDatasourceException;
 
 /**
  Data source for `MGLComputedShapeSource`. This protocol defines two optional methods for fetching
@@ -101,11 +103,7 @@ MGL_EXPORT
  @param identifier A string that uniquely identifies the source.
  @param options An `NSDictionary` of options for this source.
  */
-<<<<<<< HEAD
-- (instancetype)initWithIdentifier:(NSString *)identifier options:(nullable NS_DICTIONARY_OF(MGLShapeSourceOption, id) *)options NS_DESIGNATED_INITIALIZER;
-=======
 - (instancetype)initWithIdentifier:(NSString *)identifier options:(nullable NSDictionary<MGLShapeSourceOption, id> *)options NS_DESIGNATED_INITIALIZER;
->>>>>>> upstream/master
 
 /**
  Returns a custom shape data source initialized with an identifier, data source, and a
@@ -124,11 +122,7 @@ MGL_EXPORT
  @param identifier A string that uniquely identifies the source.
  @param options An `NSDictionary` of options for this source.
  */
-<<<<<<< HEAD
-- (instancetype)initWithIdentifier:(NSString *)identifier dataSource:(id<MGLComputedShapeSourceDataSource>)dataSource options:(nullable NS_DICTIONARY_OF(MGLShapeSourceOption, id) *)options;
-=======
 - (instancetype)initWithIdentifier:(NSString *)identifier dataSource:(id<MGLComputedShapeSourceDataSource>)dataSource options:(nullable NSDictionary<MGLShapeSourceOption, id> *)options;
->>>>>>> upstream/master
 
 /**
  Invalidates all the features and properties intersecting with or contained in

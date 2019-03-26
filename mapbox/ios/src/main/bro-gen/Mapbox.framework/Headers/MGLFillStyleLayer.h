@@ -39,6 +39,15 @@ typedef NS_ENUM(NSUInteger, MGLFillTranslationAnchor) {
  new fill style layer and add it to the style using a method such as
  `-[MGLStyle addLayer:]`.
 
+ #### Related examples
+ See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/select-layer/">Select a feature
+ within a layer</a> example to learn how to use a `TERNARY` expression to modify
+ the `fillOpacity` of an `MGLFillStyleLayer` object. See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/fill-pattern/">Add a pattern to
+ a polygon</a> example to learn how to use an image to add pattern to the
+ features styled by a `MGLFillStyleLayer`.
+
  ### Example
 
  ```swift
@@ -151,11 +160,7 @@ MGL_EXPORT
  value will also affect the 1pt stroke around the fill, if the stroke is used.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -222,12 +227,8 @@ MGL_EXPORT
 
 /**
  Name of image in sprite to use for drawing image fills. For seamless patterns,
-<<<<<<< HEAD
- image width and height must be a factor of two (2, 4, 8, ..., 512).
-=======
  image width and height must be a factor of two (2, 4, 8, ..., 512). Note that
  zoom-dependent expressions will be evaluated only at integer zoom levels.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -235,11 +236,8 @@ MGL_EXPORT
  * Predefined functions, including mathematical and string operators
  * Conditional expressions
  * Variable assignments and references to assigned variables
- * Step functions applied to the `$zoomLevel` variable
- 
- This property does not support applying interpolation functions to the
- `$zoomLevel` variable or applying interpolation or step functions to feature
- attributes.
+ * Interpolation and step functions applied to the `$zoomLevel` variable and/or
+ feature attributes
  */
 @property (nonatomic, null_resettable) NSExpression *fillPattern;
 

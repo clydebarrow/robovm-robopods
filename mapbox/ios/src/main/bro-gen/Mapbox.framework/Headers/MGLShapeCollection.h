@@ -40,11 +40,7 @@ MGL_EXPORT
 /**
  An array of shapes forming the shape collection.
  */
-<<<<<<< HEAD
-@property (nonatomic, copy, readonly) NS_ARRAY_OF(MGLShape *) *shapes;
-=======
 @property (nonatomic, copy, readonly) NSArray<MGLShape *> *shapes;
->>>>>>> upstream/master
 
 /**
  Creates and returns a shape collection consisting of the given shapes.
@@ -53,11 +49,7 @@ MGL_EXPORT
     this array is copied to the new object.
  @return A new shape collection object.
  */
-<<<<<<< HEAD
-+ (instancetype)shapeCollectionWithShapes:(NS_ARRAY_OF(MGLShape *) *)shapes;
-=======
 + (instancetype)shapeCollectionWithShapes:(NSArray<MGLShape *> *)shapes;
->>>>>>> upstream/master
 
 @end
 

@@ -89,6 +89,15 @@ typedef NS_ENUM(NSUInteger, MGLLineTranslationAnchor) {
  new line style layer and add it to the style using a method such as
  `-[MGLStyle addLayer:]`.
 
+ #### Related examples
+ See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/shape-collection/">Add multiple
+ shapes from a single shape source</a> example to learn how to add a line to
+ your map using this style layer. See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/runtime-add-line/">Add a line
+ style layer from GeoJSON</a> example to learn how to add and style line data to
+ an `MGLMapView` object at runtime.
+
  ### Example
 
  ```swift
@@ -180,11 +189,7 @@ MGL_EXPORT
  Used to automatically convert miter joins to bevel joins for sharp angles.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 2. Set this property to `nil` to reset it to the default value.
-=======
  `2`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  This property is only applied to the style if `lineJoin` is set to an
  expression that evaluates to `miter`. Otherwise, it is ignored.
@@ -206,11 +211,7 @@ MGL_EXPORT
  Used to automatically convert round joins to miter joins for shallow angles.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1.05. Set this property to `nil` to reset it to the default value.
-=======
  `1.05`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  This property is only applied to the style if `lineJoin` is set to an
  expression that evaluates to `round`. Otherwise, it is ignored.
@@ -236,11 +237,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -314,14 +311,10 @@ MGL_EXPORT
 /**
  Specifies the lengths of the alternating dashes and gaps that form the dash
  pattern. The lengths are later scaled by the line width. To convert a dash
-<<<<<<< HEAD
- length to points, multiply the length by the current line width.
-=======
  length to points, multiply the length by the current line width. Note that
  GeoJSON sources with `lineMetrics: true` specified won't render dashed lines to
  the expected scale. Also note that zoom-dependent expressions will be evaluated
  only at integer zoom levels.
->>>>>>> upstream/master
  
  This property is measured in line widths.
  
@@ -362,11 +355,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -386,6 +375,52 @@ MGL_EXPORT
 */
 @property (nonatomic) MGLTransition lineGapWidthTransition;
 
+#if TARGET_OS_IPHONE
+/**
+ The color gradient with which the line will be drawn. This property only has an
+ effect on lines defined by an `MGLShapeSource` whose
+ `MGLShapeSourceOptionLineDistanceMetrics` option is set to `YES`.
+ 
+ This property is only applied to the style if `lineDasharray` is set to `nil`,
+ and `linePattern` is set to `nil`, and the data source requirements are met.
+ Otherwise, it is ignored.
+ 
+ You can set this property to an expression containing any of the following:
+ 
+ * Constant `UIColor` values
+ * Predefined functions, including mathematical and string operators
+ * Conditional expressions
+ * Variable assignments and references to assigned variables
+ * Interpolation and step functions applied to the `$lineProgress` variable
+ 
+ This property does not support applying interpolation or step functions to
+ feature attributes.
+ */
+@property (nonatomic, null_resettable) NSExpression *lineGradient;
+#else
+/**
+ The color gradient with which the line will be drawn. This property only has an
+ effect on lines defined by an `MGLShapeSource` whose
+ `MGLShapeSourceOptionLineDistanceMetrics` option is set to `YES`.
+ 
+ This property is only applied to the style if `lineDasharray` is set to `nil`,
+ and `linePattern` is set to `nil`, and the data source requirements are met.
+ Otherwise, it is ignored.
+ 
+ You can set this property to an expression containing any of the following:
+ 
+ * Constant `NSColor` values
+ * Predefined functions, including mathematical and string operators
+ * Conditional expressions
+ * Variable assignments and references to assigned variables
+ * Interpolation and step functions applied to the `$lineProgress` variable
+ 
+ This property does not support applying interpolation or step functions to
+ feature attributes.
+ */
+@property (nonatomic, null_resettable) NSExpression *lineGradient;
+#endif
+
 /**
  The line's offset. For linear features, a positive value offsets the line to
  the right, relative to the direction of the line, and a negative value to the
@@ -395,11 +430,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -423,11 +454,7 @@ MGL_EXPORT
  The opacity at which the line will be drawn.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -457,11 +484,8 @@ MGL_EXPORT
  * Predefined functions, including mathematical and string operators
  * Conditional expressions
  * Variable assignments and references to assigned variables
- * Step functions applied to the `$zoomLevel` variable
- 
- This property does not support applying interpolation functions to the
- `$zoomLevel` variable or applying interpolation or step functions to feature
- attributes.
+ * Interpolation and step functions applied to the `$zoomLevel` variable and/or
+ feature attributes
  */
 @property (nonatomic, null_resettable) NSExpression *linePattern;
 
@@ -573,11 +597,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

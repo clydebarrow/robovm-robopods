@@ -51,10 +51,7 @@ public final class /*<name>*/MGLCameraChangeReason/*</name>*/ extends Bits</*<na
     public static final MGLCameraChangeReason GestureZoomOut = new MGLCameraChangeReason(64L);
     public static final MGLCameraChangeReason GestureOneFingerZoom = new MGLCameraChangeReason(128L);
     public static final MGLCameraChangeReason GestureTilt = new MGLCameraChangeReason(256L);
-<<<<<<< HEAD
-=======
     public static final MGLCameraChangeReason TransitionCancelled = new MGLCameraChangeReason(65536L);
->>>>>>> upstream/master
     /*</values>*/
 
     /*<bind>*/

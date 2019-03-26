@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
  new heatmap style layer and add it to the style using a method such as
  `-[MGLStyle addLayer:]`.
 
+ #### Related examples
+ See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/heatmap-example/">Create a
+ heatmap layer</a> example to learn how to add this style layer to your map.
+
  ### Example
 
  ```swift
@@ -116,11 +121,7 @@ MGL_EXPORT
  Primarily used for adjusting the heatmap based on zoom level.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -146,11 +147,7 @@ MGL_EXPORT
  The global opacity at which the heatmap layer will be drawn.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -179,11 +176,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 30. Set this property to `nil` to reset it to the default value.
-=======
  `30`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -209,11 +202,7 @@ MGL_EXPORT
  Especially useful when combined with clustering.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

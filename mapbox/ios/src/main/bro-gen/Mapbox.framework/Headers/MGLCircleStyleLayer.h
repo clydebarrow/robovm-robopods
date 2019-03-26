@@ -78,6 +78,16 @@ typedef NS_ENUM(NSUInteger, MGLCircleTranslationAnchor) {
  new circle style layer and add it to the style using a method such as
  `-[MGLStyle addLayer:]`.
 
+ #### Related examples
+ See the <a
+ href="https://docs.mapbox.com/ios/maps/examples/dds-circle-layer/">Data-driven
+ circles</a>, <a
+ href="https://docs.mapbox.com/ios/maps/examples/shape-collection/">Add multiple
+ shapes from a single shape source</a>, and <a
+ href="https://docs.mapbox.com/ios/maps/examples/clustering/">Cluster point
+ data</a> examples to learn how to add circles to your map using this style
+ layer.
+
  ### Example
 
  ```swift
@@ -117,11 +127,7 @@ MGL_EXPORT
  full opacity.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -190,11 +196,7 @@ MGL_EXPORT
  The opacity at which the circle will be drawn.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -243,11 +245,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 5. Set this property to `nil` to reset it to the default value.
-=======
  `5`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -346,11 +344,7 @@ MGL_EXPORT
  The opacity of the circle's stroke.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -377,11 +371,7 @@ MGL_EXPORT
  This property is measured in points.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  

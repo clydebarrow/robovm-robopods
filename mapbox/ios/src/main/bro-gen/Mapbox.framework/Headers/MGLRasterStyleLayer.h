@@ -7,6 +7,27 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ The resampling/interpolation method to use for overscaling, also known as
+ texture magnification filter
+
+ Values of this type are used in the `MGLRasterStyleLayer.rasterResamplingMode`
+ property.
+ */
+typedef NS_ENUM(NSUInteger, MGLRasterResamplingMode) {
+    /**
+     (Bi)linear filtering interpolates point values using the weighted average
+     of the four closest original source points creating a smooth but blurry
+     look when overscaled
+     */
+    MGLRasterResamplingModeLinear,
+    /**
+     Nearest neighbor filtering interpolates point values using the nearest
+     original source point creating a sharp but pointated look when overscaled
+     */
+    MGLRasterResamplingModeNearest,
+};
+
+/**
  An `MGLRasterStyleLayer` is a style layer that renders georeferenced raster
  imagery on the map, especially raster tiles.
  
@@ -15,8 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
  `MGLImageSource` object. For example, you could use a raster style layer to
  render <a href="https://www.mapbox.com/satellite/">Mapbox Satellite</a>
  imagery, a <a
- href="https://www.mapbox.com/help/define-tileset/#raster-tilesets">raster tile
- set</a> uploaded to Mapbox Studio, or a raster map authored in <a
+ href="https://docs.mapbox.com/help/glossary/tileset/#raster-tilesets">raster
+ tile set</a> uploaded to Mapbox Studio, or a raster map authored in <a
  href="https://tilemill-project.github.io/tilemill/">TileMill</a>, the classic
  Mapbox Editor, or Mapbox Studio Classic.
  
@@ -30,6 +51,12 @@ NS_ASSUME_NONNULL_BEGIN
  otherwise, find it using the `MGLStyle.layers` property. You can also create a
  new raster style layer and add it to the style using a method such as
  `-[MGLStyle addLayer:]`.
+
+ #### Related examples
+ See the <a href="https://docs.mapbox.com/ios/maps/examples/image-source/">Add
+ an image</a> and <a
+ href="https://docs.mapbox.com/ios/maps/examples/source-custom-raster/">Add
+ raster imagery</a> examples to learn how to add imagery with this style layer.
 
  ### Example
 
@@ -64,11 +91,7 @@ MGL_EXPORT
  brightness.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-brightness-max"><code>raster-brightness-max</code></a>
@@ -101,11 +124,7 @@ MGL_EXPORT
  brightness.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-brightness-min"><code>raster-brightness-min</code></a>
@@ -137,11 +156,7 @@ MGL_EXPORT
  Increase or reduce the contrast of the image.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -169,11 +184,7 @@ MGL_EXPORT
  This property is measured in milliseconds.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 300. Set this property to `nil` to reset it to the default value.
-=======
  `300`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -194,11 +205,7 @@ MGL_EXPORT
  This property is measured in degrees.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  This attribute corresponds to the <a
  href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-hue-rotate"><code>raster-hue-rotate</code></a>
@@ -230,11 +237,7 @@ MGL_EXPORT
  The opacity at which the image will be drawn.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 1. Set this property to `nil` to reset it to the default value.
-=======
  `1`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -257,14 +260,44 @@ MGL_EXPORT
 @property (nonatomic) MGLTransition rasterOpacityTransition;
 
 /**
+ The resampling/interpolation method to use for overscaling, also known as
+ texture magnification filter
+ 
+ The default value of this property is an expression that evaluates to `linear`.
+ Set this property to `nil` to reset it to the default value.
+ 
+ This attribute corresponds to the <a
+ href="https://www.mapbox.com/mapbox-gl-style-spec/#paint-raster-resampling"><code>raster-resampling</code></a>
+ layout property in the Mapbox Style Specification.
+ 
+ You can set this property to an expression containing any of the following:
+ 
+ * Constant `MGLRasterResamplingMode` values
+ * Any of the following constant string values:
+   * `linear`: (Bi)linear filtering interpolates pixel values using the weighted
+ average of the four closest original source pixels creating a smooth but blurry
+ look when overscaled
+   * `nearest`: Nearest neighbor filtering interpolates pixel values using the
+ nearest original source pixel creating a sharp but pixelated look when
+ overscaled
+ * Predefined functions, including mathematical and string operators
+ * Conditional expressions
+ * Variable assignments and references to assigned variables
+ * Step functions applied to the `$zoomLevel` variable
+ 
+ This property does not support applying interpolation functions to the
+ `$zoomLevel` variable or applying interpolation or step functions to feature
+ attributes.
+ */
+@property (nonatomic, null_resettable) NSExpression *rasterResamplingMode;
+
+@property (nonatomic, null_resettable) NSExpression *rasterResampling __attribute__((unavailable("Use rasterResamplingMode instead.")));
+
+/**
  Increase or reduce the saturation of the image.
  
  The default value of this property is an expression that evaluates to the float
-<<<<<<< HEAD
- 0. Set this property to `nil` to reset it to the default value.
-=======
  `0`. Set this property to `nil` to reset it to the default value.
->>>>>>> upstream/master
  
  You can set this property to an expression containing any of the following:
  
@@ -285,6 +318,29 @@ MGL_EXPORT
  This property corresponds to the `raster-saturation-transition` property in the style JSON file format.
 */
 @property (nonatomic) MGLTransition rasterSaturationTransition;
+
+@end
+
+/**
+ Methods for wrapping an enumeration value for a style layer attribute in an
+ `MGLRasterStyleLayer` object and unwrapping its raw value.
+ */
+@interface NSValue (MGLRasterStyleLayerAdditions)
+
+#pragma mark Working with Raster Style Layer Attribute Values
+
+/**
+ Creates a new value object containing the given `MGLRasterResamplingMode` enumeration.
+
+ @param rasterResamplingMode The value for the new object.
+ @return A new value object that contains the enumeration value.
+ */
++ (instancetype)valueWithMGLRasterResamplingMode:(MGLRasterResamplingMode)rasterResamplingMode;
+
+/**
+ The `MGLRasterResamplingMode` enumeration representation of the value.
+ */
+@property (readonly) MGLRasterResamplingMode MGLRasterResamplingModeValue;
 
 @end
 
