@@ -39,37 +39,32 @@ import org.robovm.apple.coreanimation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLOpenGLStyleLayer/*</name>*/ 
-    extends /*<extends>*/MGLStyleLayer/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLLoggingConfiguration/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MGLOpenGLStyleLayerPtr extends Ptr<MGLOpenGLStyleLayer, MGLOpenGLStyleLayerPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MGLOpenGLStyleLayer.class); }/*</bind>*/
+    /*<ptr>*/public static class MGLLoggingConfigurationPtr extends Ptr<MGLLoggingConfiguration, MGLLoggingConfigurationPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MGLLoggingConfiguration.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected MGLOpenGLStyleLayer() {}
-    protected MGLOpenGLStyleLayer(Handle h, long handle) { super(h, handle); }
-    protected MGLOpenGLStyleLayer(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithIdentifier:")
-    public MGLOpenGLStyleLayer(String identifier) { super((SkipInit) null); initObject(init(identifier)); }
+    public MGLLoggingConfiguration() {}
+    protected MGLLoggingConfiguration(Handle h, long handle) { super(h, handle); }
+    protected MGLLoggingConfiguration(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "style")
-    public native MGLStyle getStyle();
-    @Property(selector = "context")
-    public native NSObject getContext();
+    @Property(selector = "handler")
+    public native @Block("(,,@MachineSizedUInt,)") VoidBlock4<MGLLoggingLevel, NSString, Long, NSString> getHandler();
+    @Property(selector = "setHandler:")
+    public native void setHandler(@Block("(,,@MachineSizedUInt,)") VoidBlock4<MGLLoggingLevel, NSString, Long, NSString> v);
+    @Property(selector = "loggingLevel")
+    public native MGLLoggingLevel getLoggingLevel();
+    @Property(selector = "setLoggingLevel:")
+    public native void setLoggingLevel(MGLLoggingLevel v);
+    @Property(selector = "sharedConfiguration")
+    public static native MGLLoggingConfiguration getSharedConfiguration();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithIdentifier:")
-    protected native @Pointer long init(String identifier);
-    @Method(selector = "didMoveToMapView:")
-    public native void didMoveToMapView(MGLMapView mapView);
-    @Method(selector = "willMoveFromMapView:")
-    public native void willMoveFromMapView(MGLMapView mapView);
-    @Method(selector = "drawInMapView:withContext:")
-    public native void drawInMapView(MGLMapView mapView, @ByVal MGLStyleLayerDrawingContext context);
-    @Method(selector = "setNeedsDisplay")
-    public native void setNeedsDisplay();
+    
     /*</methods>*/
 }
