@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.mobidevelop.robovm</groupId>
-    <version>2.2.3-SNAPSHOT</version>
+    <version>2.2.4-SNAPSHOT</version>
     <artifactId>robopods-parent</artifactId>
     <name>RoboPods Parent</name>
     <packaging>pom</packaging>
@@ -178,8 +178,8 @@
 
         <module>appmetrica</module>
         <module>appodeal</module>
+        <module>appsflyer</module>
         <module>bolts</module>
-        <module>fabric</module>
         <module>facebook</module>
         <module>firebase</module>
         <module>flurry</module>

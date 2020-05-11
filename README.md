@@ -26,7 +26,7 @@ In your project's root `build.gradle` file add the following at the top of the `
 
 ```gradle
 buildscript {
-   project.ext.robopodsVersion = "2.2.2"
+   project.ext.robopodsVersion = "2.2.3"
 }
 ```
 
@@ -45,7 +45,7 @@ In your project's root `pom.xml` file add the following property:
 
 ```maven
 <properties>
-   <robopods.version>2.2.2</robopods.version>
+   <robopods.version>2.2.3</robopods.version>
 </properties>
 ```
 
@@ -94,7 +94,7 @@ To prevent compatibility issues make sure that you use the same version for the 
 
 The current stable version is:
 
-> 2.2.2
+> 2.2.3
 
 If you want to use the latest and greatest of every RoboPod, use the latest snapshot version for your dependencies:
 
@@ -109,8 +109,8 @@ This is the list of currently available RoboPods. Click them to get more informa
 |------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [RoboPods Plugins](plugins/)                         | The RoboPods Plugins are cross-platform libraries that abstract platform specific functionality to a common API. Whether you want to add in-app-purchases, display dialogs, or just store some preferences in your app; our Plugins got you covered! |
 | [Appodeal](appodeal/)                                | The mobile ad network Appodeal runs multiple premium networks under one integration. |
+| [AppsFlyer](appsflyer/)                                | AppsFlyer mobile attribution & marketing analytics platform. |
 | [Bolts](bolts/)                                      | This RoboPod is mainly used to make the Facebook and Parse RoboPods functional. Bolts is a collection of low-level libraries designed to make developing mobile apps easier. |
-| [Fabric](fabric/)                                    | Twitter's Mobile Development Platform |
 | [Facebook](facebook/)                                | Build, grow, and monetize your app with Facebook. The Facebook SDK allows you to natively integrate Facebook into your app. |
 | [Firebase](firebase/)                                | Firebase Analytics and Firebase Messaging bindings. |
 | [Flurry](flurry/)                                    | Measure, track and analyze app performance, user acquisition and activity with Flurry Analytics. |
@@ -142,6 +142,7 @@ This is the list of currently available AltPods.
 | [OneSignal](https://github.com/dkimitsa/robovm-robopods/tree/alt/onesignal/)            | OneSignal is a free push notification service for mobile apps                          |
 | [Pollfish](https://github.com/dkimitsa/robovm-robopods/tree/alt/pollfish/)              | Simple Surveys |
 | [SAMKeychain](https://github.com/dkimitsa/robovm-robopods/tree/alt/samkeychain/)        | SAMKeychain is a simple wrapper for accessing accounts, getting passwords, setting passwords, and deleting passwords using the system Keychain on Mac OS X and iOS|
+| [Facebook](https://github.com/dkimitsa/robovm-robopods/tree/alt/facebook/)              | Used to integrate the Facebook Platform with your iOS & tvOS apps                       |
 
 ## Creating/Updating RoboPods
 
