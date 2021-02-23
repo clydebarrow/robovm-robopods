@@ -39,36 +39,27 @@ import org.robovm.apple.coreanimation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLNetworkConfiguration/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLObserver/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MGLNetworkConfigurationPtr extends Ptr<MGLNetworkConfiguration, MGLNetworkConfigurationPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MGLNetworkConfiguration.class); }/*</bind>*/
+    /*<ptr>*/public static class MGLObserverPtr extends Ptr<MGLObserver, MGLObserverPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MGLObserver.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MGLNetworkConfiguration() {}
-    protected MGLNetworkConfiguration(Handle h, long handle) { super(h, handle); }
-    protected MGLNetworkConfiguration(SkipInit skipInit) { super(skipInit); }
+    public MGLObserver() {}
+    protected MGLObserver(Handle h, long handle) { super(h, handle); }
+    protected MGLObserver(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "delegate")
-    public native MGLNetworkConfigurationDelegate getDelegate();
-    @Property(selector = "setDelegate:", strongRef = true)
-    public native void setDelegate(MGLNetworkConfigurationDelegate v);
-    @Property(selector = "sharedManager")
-    public static native MGLNetworkConfiguration getSharedManager();
-    @Property(selector = "sessionConfiguration")
-    public native NSURLSessionConfiguration getSessionConfiguration();
-    @Property(selector = "setSessionConfiguration:")
-    public native void setSessionConfiguration(NSURLSessionConfiguration v);
-    @Property(selector = "connected")
-    public native boolean isConnected();
-    @Property(selector = "setConnected:")
-    public native void setConnected(boolean v);
+    @Property(selector = "identifier")
+    public native @MachineSizedUInt long getIdentifier();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    
+    @Method(selector = "notifyWithEvent:")
+    public native void notifyWithEvent(MGLEvent event);
+    @Method(selector = "isEqualToObserver:")
+    public native boolean isEqualToObserver(MGLObserver other);
     /*</methods>*/
 }

@@ -39,36 +39,34 @@ import org.robovm.apple.coreanimation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLNetworkConfiguration/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLEvent/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MGLNetworkConfigurationPtr extends Ptr<MGLNetworkConfiguration, MGLNetworkConfigurationPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MGLNetworkConfiguration.class); }/*</bind>*/
+    /*<ptr>*/public static class MGLEventPtr extends Ptr<MGLEvent, MGLEventPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MGLEvent.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MGLNetworkConfiguration() {}
-    protected MGLNetworkConfiguration(Handle h, long handle) { super(h, handle); }
-    protected MGLNetworkConfiguration(SkipInit skipInit) { super(skipInit); }
+    public MGLEvent() {}
+    protected MGLEvent(Handle h, long handle) { super(h, handle); }
+    protected MGLEvent(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "delegate")
-    public native MGLNetworkConfigurationDelegate getDelegate();
-    @Property(selector = "setDelegate:", strongRef = true)
-    public native void setDelegate(MGLNetworkConfigurationDelegate v);
-    @Property(selector = "sharedManager")
-    public static native MGLNetworkConfiguration getSharedManager();
-    @Property(selector = "sessionConfiguration")
-    public native NSURLSessionConfiguration getSessionConfiguration();
-    @Property(selector = "setSessionConfiguration:")
-    public native void setSessionConfiguration(NSURLSessionConfiguration v);
-    @Property(selector = "connected")
-    public native boolean isConnected();
-    @Property(selector = "setConnected:")
-    public native void setConnected(boolean v);
+    @Property(selector = "type")
+    public native String getType();
+    @Property(selector = "begin")
+    public native double getBegin();
+    @Property(selector = "end")
+    public native double getEnd();
+    @Property(selector = "data")
+    public native NSObject getData();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @GlobalValue(symbol="MGLEventTypeResourceRequest", optional=true)
+    public static native String TypeResourceRequest();
     
+    @Method(selector = "isEqualToEvent:")
+    public native boolean isEqualToEvent(MGLEvent otherEvent);
     /*</methods>*/
 }

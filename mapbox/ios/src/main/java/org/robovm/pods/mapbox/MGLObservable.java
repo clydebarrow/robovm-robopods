@@ -39,7 +39,7 @@ import org.robovm.apple.coreanimation.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MGLLocationManagerDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MGLObservable/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -51,16 +51,12 @@ import org.robovm.apple.coreanimation.*;
     
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "locationManager:didUpdateLocations:")
-    void didUpdateLocations(MGLLocationManager manager, NSArray<CLLocation> locations);
-    @Method(selector = "locationManager:didUpdateHeading:")
-    void didUpdateHeading(MGLLocationManager manager, CLHeading newHeading);
-    @Method(selector = "locationManagerShouldDisplayHeadingCalibration:")
-    boolean locationManagerShouldDisplayHeadingCalibration(MGLLocationManager manager);
-    @Method(selector = "locationManager:didFailWithError:")
-    void didFailWithError(MGLLocationManager manager, NSError error);
-    @Method(selector = "locationManagerDidChangeAuthorization:")
-    void locationManagerDidChangeAuthorization(MGLLocationManager manager);
+    @Method(selector = "subscribeForObserver:events:")
+    void subscribeForObserver(MGLObserver observer, NSSet<NSString> events);
+    @Method(selector = "unsubscribeForObserver:events:")
+    void unsubscribeForObserver(MGLObserver observer, NSSet<NSString> events);
+    @Method(selector = "unsubscribeForObserver:")
+    void unsubscribeForObserver(MGLObserver observer);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

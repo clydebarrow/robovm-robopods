@@ -55,6 +55,12 @@ enums:
     MGLMetricType: {}
 
 classes:
+    MGLEvent: {}
+    MGLObserver:
+        methods:
+            '-notifyWithEvent:':
+                name: notifyWithEvent
+    MGLUserLocationAnnotationViewStyle: {}
     MGLOfflinePack:
         methods:
             '-setContext:completionHandler:':
@@ -221,6 +227,8 @@ classes:
                 name: init
     MGLMapView:
         methods:
+            '-subscribeForObserver:event:':
+                name: subscribeForObserver
             '-setUserTrackingMode:animated:completionHandler:':
                 name: setUserTrackingMode
             '-setTargetCoordinate:animated:completionHandler:':
@@ -790,6 +798,12 @@ classes:
 
 
 protocols:
+    MGLObservable:
+        methods:
+            '-subscribeForObserver:events:':
+                name: subscribeForObserver
+            '-unsubscribeForObserver:events:':
+                name: unsubscribeForObserver
     MGLMapSnapshotterDelegate:
         methods:
             '-mapSnapshotterDidFail:withError:':
@@ -1015,6 +1029,12 @@ values:
         class: Mapbox
         type: String    
         name: '#{g[0]}Exception'
+
+    MGLEventTypeResourceRequest:
+        class: MGLEvent
+        type: String
+        name: 'TypeResourceRequest'
+
 
 
     # Make sure we don't miss any values if new ones are introduced in a later version

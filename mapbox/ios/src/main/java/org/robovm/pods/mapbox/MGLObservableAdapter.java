@@ -36,32 +36,28 @@ import org.robovm.apple.coreanimation.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MGLLocationManagerDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MGLObservableAdapter/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*/implements MGLObservable/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*//*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "locationManager:didUpdateLocations:")
-    void didUpdateLocations(MGLLocationManager manager, NSArray<CLLocation> locations);
-    @Method(selector = "locationManager:didUpdateHeading:")
-    void didUpdateHeading(MGLLocationManager manager, CLHeading newHeading);
-    @Method(selector = "locationManagerShouldDisplayHeadingCalibration:")
-    boolean locationManagerShouldDisplayHeadingCalibration(MGLLocationManager manager);
-    @Method(selector = "locationManager:didFailWithError:")
-    void didFailWithError(MGLLocationManager manager, NSError error);
-    @Method(selector = "locationManagerDidChangeAuthorization:")
-    void locationManagerDidChangeAuthorization(MGLLocationManager manager);
+    @NotImplemented("subscribeForObserver:events:")
+    public void subscribeForObserver(MGLObserver observer, NSSet<NSString> events) {}
+    @NotImplemented("unsubscribeForObserver:events:")
+    public void unsubscribeForObserver(MGLObserver observer, NSSet<NSString> events) {}
+    @NotImplemented("unsubscribeForObserver:")
+    public void unsubscribeForObserver(MGLObserver observer) {}
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }
