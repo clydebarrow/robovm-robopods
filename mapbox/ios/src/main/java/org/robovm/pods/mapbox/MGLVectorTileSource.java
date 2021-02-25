@@ -53,7 +53,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithIdentifier:configurationURL:")
     public MGLVectorTileSource(String identifier, NSURL configurationURL) { super((SkipInit) null); initObject(init(identifier, configurationURL)); }
     @Method(selector = "initWithIdentifier:tileURLTemplates:options:")
-    public MGLVectorTileSource(String identifier, NSArray<NSString> tileURLTemplates, MGLTileSourceOption options) { super((SkipInit) null); initObject(init(identifier, tileURLTemplates, options)); }
+    public MGLVectorTileSource(String identifier, NSArray<NSString> tileURLTemplates, NSDictionary<NSString, ?> options) { super((SkipInit) null); initObject(init(identifier, tileURLTemplates, options)); }
     @Method(selector = "initWithIdentifier:")
     public MGLVectorTileSource(String identifier) { super(identifier); }
     /*</constructors>*/
@@ -65,8 +65,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithIdentifier:configurationURL:")
     protected native @Pointer long init(String identifier, NSURL configurationURL);
     @Method(selector = "initWithIdentifier:tileURLTemplates:options:")
-    protected native @Pointer long init(String identifier, NSArray<NSString> tileURLTemplates, MGLTileSourceOption options);
+    protected native @Pointer long init(String identifier, NSArray<NSString> tileURLTemplates, NSDictionary<NSString, ?> options);
     @Method(selector = "featuresInSourceLayersWithIdentifiers:predicate:")
-    public native NSArray<?> featuresInSourceLayers(NSSet<NSString> sourceLayerIdentifiers, NSPredicate predicate);
+    public native NSArray<?> features(NSSet<NSString> sourceLayerIdentifiers, NSPredicate predicate);
     /*</methods>*/
 }

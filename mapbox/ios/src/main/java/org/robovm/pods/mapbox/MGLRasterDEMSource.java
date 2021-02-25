@@ -55,7 +55,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithIdentifier:configurationURL:tileSize:")
     public MGLRasterDEMSource(String identifier, NSURL configurationURL, @MachineSizedFloat double tileSize) { super(identifier, configurationURL, tileSize); }
     @Method(selector = "initWithIdentifier:tileURLTemplates:options:")
-    public MGLRasterDEMSource(String identifier, NSArray<NSString> tileURLTemplates, MGLTileSourceOption options) { super(identifier, tileURLTemplates, options); }
+    public MGLRasterDEMSource(String identifier, NSArray<NSString> tileURLTemplates, NSDictionary<NSString, ?> options) { super(identifier, tileURLTemplates, options); }
     @Method(selector = "initWithIdentifier:")
     public MGLRasterDEMSource(String identifier) { super(identifier); }
     /*</constructors>*/
