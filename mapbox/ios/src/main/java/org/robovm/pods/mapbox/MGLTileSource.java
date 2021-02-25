@@ -61,23 +61,6 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="MGLTileSourceOptionMinimumZoomLevel", optional=true)
-    public static native Option MinimumZoomLevel();
-    @GlobalValue(symbol="MGLTileSourceOptionMaximumZoomLevel", optional=true)
-    public static native Option MaximumZoomLevel();
-    @GlobalValue(symbol="MGLTileSourceOptionCoordinateBounds", optional=true)
-    public static native Option CoordinateBounds();
-    @GlobalValue(symbol="MGLTileSourceOptionAttributionHTMLString", optional=true)
-    public static native Option AttributionHTMLString();
-    @GlobalValue(symbol="MGLTileSourceOptionAttributionInfos", optional=true)
-    public static native Option AttributionInfos();
-    @GlobalValue(symbol="MGLTileSourceOptionTileCoordinateSystem", optional=true)
-    public static native Option TileCoordinateSystem();
-    @GlobalValue(symbol="MGLTileSourceOptionTileSize", optional=true)
-    public static native Option TileSize();
-    @GlobalValue(symbol="MGLTileSourceOptionDEMEncoding", optional=true)
-    public static native Option DEMEncoding();
-    
     
     /*</methods>*/
     public abstract static class Option extends NSObject {

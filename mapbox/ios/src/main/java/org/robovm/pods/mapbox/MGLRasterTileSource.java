@@ -55,7 +55,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithIdentifier:configurationURL:tileSize:")
     public MGLRasterTileSource(String identifier, NSURL configurationURL, @MachineSizedFloat double tileSize) { super((SkipInit) null); initObject(init(identifier, configurationURL, tileSize)); }
     @Method(selector = "initWithIdentifier:tileURLTemplates:options:")
-    public MGLRasterTileSource(String identifier, NSArray<NSString> tileURLTemplates, NSDictionary<NSString, ?> options) { super((SkipInit) null); initObject(init(identifier, tileURLTemplates, options)); }
+    public MGLRasterTileSource(String identifier, NSArray<NSString> tileURLTemplates, MGLTileSourceOption options) { super((SkipInit) null); initObject(init(identifier, tileURLTemplates, options)); }
     @Method(selector = "initWithIdentifier:")
     public MGLRasterTileSource(String identifier) { super(identifier); }
     /*</constructors>*/
@@ -69,6 +69,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithIdentifier:configurationURL:tileSize:")
     protected native @Pointer long init(String identifier, NSURL configurationURL, @MachineSizedFloat double tileSize);
     @Method(selector = "initWithIdentifier:tileURLTemplates:options:")
-    protected native @Pointer long init(String identifier, NSArray<NSString> tileURLTemplates, NSDictionary<NSString, ?> options);
+    protected native @Pointer long init(String identifier, NSArray<NSString> tileURLTemplates, MGLTileSourceOption options);
     /*</methods>*/
 }
